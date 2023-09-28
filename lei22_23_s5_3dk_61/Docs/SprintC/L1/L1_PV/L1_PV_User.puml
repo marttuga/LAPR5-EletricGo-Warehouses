@@ -1,0 +1,52 @@
+@startuml Sequence Diagram
+autonumber
+
+actor ADMIN as LM
+
+participant "<<System>> <<Context C4>> ELETRIC GO" as SYS
+
+activate LM
+alt if User doesn't exist
+LM -> SYS: Starts to create a User
+activate SYS 
+SYS --> LM: Asks for data
+deactivate SYS
+LM-> SYS : Introduce the requested data
+activate SYS  
+
+alt if ok 
+
+
+LM <-- SYS: OK
+
+else error 
+ 
+
+LM <-- SYS: ERROR
+
+deactivate SYS
+
+
+
+end alt
+
+else if you want to list the User
+LM -> SYS: asks to list the Users
+alt if ok 
+
+activate SYS
+
+ 
+LM <-- SYS: OK and shows list of Users
+
+else error 
+
+
+LM <-- SYS: ERROR
+deactivate SYS
+
+
+end alt
+end alt
+deactivate LM
+@enduml

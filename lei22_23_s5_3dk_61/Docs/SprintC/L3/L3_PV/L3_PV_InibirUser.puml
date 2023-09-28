@@ -1,0 +1,80 @@
+@startuml Sequence Diagram
+autonumber
+
+actor Router as LM
+
+activate LM
+box "<<System>> EletricGO" #LightBlue
+'participant "<<System>> EletricGO" as E
+participant "Views" as Views
+participant "ListUsersTS" as ctr
+participant "UserService" as serv
+end box
+
+
+
+
+            LM -> Views: asks to list the users
+            activate Views
+            Views -> ctr: getusers()
+            deactivate Views
+            activate ctr
+
+    ctr -> serv: getusers
+    deactivate ctr
+    activate serv
+   
+ 
+
+    alt if ok
+    
+
+    serv --> Views: 200
+     
+    activate Views
+    LM <-- Views: OK
+    deactivate Views
+
+     LM -> Views: asks to change user status
+            activate Views
+
+                        alt disable user
+
+            Views -> ctr: changeStatusDisables()
+            activate ctr
+
+    ctr -> serv: changeStatusDisables
+    deactivate ctr
+    serv --> Views: 200
+     
+    LM <-- Views: OK shows disabled user
+
+
+               else enables user
+
+  Views -> ctr: changeStatusEnables()
+            activate ctr
+
+    ctr -> serv: changeStatusEnables
+    deactivate ctr
+    serv --> Views: 200
+     
+    LM <-- Views: OK shows enabled user
+    deactivate Views
+
+end alt
+    else error
+    Views <-- serv: 400/423
+    deactivate ctr
+    activate Views
+
+    LM <-- Views: ERROR
+    deactivate Views
+
+                end alt
+               
+
+
+                deactivate LM
+
+                @enduml

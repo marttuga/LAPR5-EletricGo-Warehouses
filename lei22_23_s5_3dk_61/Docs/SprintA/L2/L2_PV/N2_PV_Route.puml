@@ -1,0 +1,95 @@
+@startuml Sequence Diagram
+autonumber
+
+actor LOGISTICMANAGER as LOGM
+
+activate LOGM
+box "<<System>> EletricGO" #LightBlue
+'participant "<<System>> EletricGO" as E
+participant "SPA" as SPA
+participant "LOGISTICS_M" as LM
+participant "WAREHOUSE_M" as WM
+participant "Planning" as PLAN
+end box
+
+alt if Route doesn't exist
+LOGM -> SPA: Starts to create a Route
+activate SPA
+SPA --> LOGM: Asks for data
+deactivate SPA
+LOGM-> SPA: Introduce the requested data
+activate SPA
+SPA -> LM: POST
+deactivate SPA
+activate LM
+alt if ok 
+
+LM --> SPA: 201 
+activate SPA
+LOGM <-- SPA: OK
+deactivate SPA
+else error 
+SPA <-- LM: 400/423
+deactivate LM
+activate SPA
+
+LOGM <-- SPA: ERROR
+deactivate SPA
+
+
+end alt
+else if you want to edit the Route
+
+LOGM -> SPA: Starts to edit a Route
+activate SPA
+SPA --> LOGM: Asks for data
+deactivate SPA
+
+LOGM-> SPA: Introduce the requested data
+
+activate SPA
+SPA -> LM: PUT
+deactivate SPA
+activate LM
+alt if ok 
+
+LM --> SPA: 200
+activate SPA
+LOGM <-- SPA: OK
+deactivate SPA
+else error 
+SPA <-- LM: 400/423
+deactivate LM
+activate SPA
+
+LOGM <-- SPA: ERROR
+deactivate SPA
+end alt
+
+else if you want to list the Route
+LOGM -> SPA: asks to list the Routes
+activate SPA
+SPA -> LM: GET
+deactivate SPA
+activate LM
+alt if ok 
+
+LM --> SPA: 200
+activate SPA
+LOGM <-- SPA: OK and shows list of Routes
+deactivate SPA
+else error 
+SPA <-- LM: 400/423
+deactivate LM
+activate SPA
+
+LOGM <-- SPA: ERROR
+deactivate SPA
+
+end alt
+end alt
+
+
+deactivate LOGM
+
+@enduml

@@ -1,0 +1,169 @@
+@startuml DM
+skinparam object {
+ArrowColor DarkBlue
+}
+
+skinparam stereotypeCBackgroundColor LightBlue
+
+
+package Delivery <<Aggregate>> {
+    entity Delivery <<Entity>>
+
+    object Id <<Value Object>>
+
+    object Date <<Value Object>>
+
+    object Mass <<Value Object>>
+
+    object TimeLoad <<Value Object>>
+
+    object TimeUnload <<Value Object>>
+
+}
+
+
+ entity Order <<Entity>>
+ entity Store <<Entity>>
+ entity County <<Entity>>
+ entity Fleet <<Entity>>
+ entity DeliveryPlan <<Entity>>
+ entity SaleForecast <<Entity>>
+ entity ChargingPost <<Entity>>
+
+
+
+
+
+
+
+ package Warehouse <<Aggregate>>{
+
+ entity Warehouse <<Entity>> <<Root>>{
+     }
+
+    object WarehouseID <<ValueObject>>
+
+    object Designation <<ValueObject>>
+
+    object Address <<ValueObject>>{
+        street
+        doorNumber
+        city
+        zipCode
+    }
+
+    object Coordinates <<ValueObject>>{
+        latitude
+        longitude
+    }
+
+    object Altitude <<ValueObject>>
+
+ }
+
+
+
+
+package Truck <<Aggregate>>{
+
+entity Truck <<Entity>> <<Root>>    
+
+object Tare <<ValueObject>>
+
+object Capacity <<ValueObject>>
+
+object MaxCapacity <<ValueObject>>
+
+object Autonomy <<ValueObject>>
+
+object TimeCharging <<ValueObject>>
+
+
+}
+
+package SystemUser <<Aggregate>>{
+entity User <<Entity>>
+
+object Username <<ValueObject>>
+
+object Password <<ValueObject>>
+}
+
+package Route <<Aggregate>>{
+entity Route <<Entity>>
+object RouteId <<ValueObject>>
+
+object WarehouseIdDeparture 
+
+object WarehouseIdArrival
+
+object Distance <<ValueObject>>
+object RouteTime <<ValueObject>>
+
+object BatteryWaste <<ValueObject>>
+object ExtraTime <<ValueObject>>
+
+
+}
+
+
+
+/' User '/
+User -- Username : has >
+User -- Password : has >
+User --- Customer : is an <
+
+
+Warehouse -- "1" WarehouseID: caracterized >
+Warehouse -- "1" Designation: has >
+Warehouse -- "1" Address: has >
+Warehouse -- "1" Coordinates: has >
+Warehouse -- "1" Altitude: has >
+Warehouse"1"-- "1..*" Route: origins <
+Warehouse"1"-- "1..*" Route: destiny <
+Warehouse"1"-- "1..*" Delivery: <
+
+
+Delivery"0..*"--"1" Order: has  >
+Delivery"*"--"1" Truck: belong >
+Delivery "*"--"1" DeliveryPlan: has <
+Delivery "1"--"1" Id: has <
+Delivery "1"--"1" Date: has <
+Delivery "1"--"1" Mass: has <
+Delivery "1"--"1" TimeLoad: has <
+Delivery "1"--"1" TimeUnload: has <
+
+Order"1"-- "1..*" SaleForecast: has >
+
+
+Truck"*" --"1" Fleet: has <
+Truck"1" --"1" DeliveryPlan: has >
+Truck"1" --"1" Tare: has >
+Truck"1" --"1" Capacity: has >
+Truck"1" --"1" MaxCapacity: has >
+Truck"1" --"1" Autonomy: has >
+Truck"1" --"1" TimeCharging: has >
+
+
+Route "*" --"1" DeliveryPlan: has <
+Route "1" -- "1" RouteId: has <
+Route "1" -- "1" WarehouseIdArrival: has <
+Route "1" -- "1" WarehouseIdDeparture: has <
+Route "1" -- "1" Distance: has <
+Route "1" -- "1" RouteTime: has <
+Route "1" -- "1" BatteryWaste: has <
+Route "1" -- "1" ExtraTime: has <
+
+
+/' charging post '/
+ChargingPost "1"---"1" Truck: charges>
+ChargingPost "1..*"---"1" Warehouse: has <
+
+/' Store '/
+Store "1"--- "1" Warehouse : >has
+Store "1"--- "1" County : localized >
+Store "1"--- "1..*" Delivery : has >
+
+
+
+@enduml

@@ -1,0 +1,51 @@
+@startuml
+
+top to bottom direction
+package System_EletricGo  <<Context (C4)>> {
+
+package UI 
+package Warehouse_Management 
+package Logistic_Management 
+package Plan
+
+}
+
+UI -> Warehouse_Management
+UI -> Logistic_Management 
+Plan <-- UI
+actor UIUser
+
+LogisticManagement-(0- "WM API" WarehouseManagement
+AA -(0- "API1" WarehouseManagement
+AA -(0- "API2" LogisticManagement
+UI -(0- "API3" AA
+Planning --0)-- "PLAN API" LogisticManagement
+Planning -(0- "WM API" WarehouseManagement
+
+Plan -> Planning
+Warehouse_Management -> WarehouseManagement
+Logistic_Management -> LogisticManagement
+UI -> SPA
+
+
+
+
+component "«System» «Context C4» ELETRIC GO" {
+port UI as UII.
+' port SSOAPI
+component UI as SPA{
+}
+component WarehouseManagement {
+}
+component LogisticManagement{
+}
+rectangle AA {
+}
+component Planning{
+}
+}
+UII. -- SPA
+UIUser 0-- UII.
+
+
+@enduml

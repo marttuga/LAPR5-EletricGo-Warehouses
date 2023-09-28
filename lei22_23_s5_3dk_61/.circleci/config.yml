@@ -1,0 +1,16 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: mcr.microsoft.com/dotnet/sdk:6.0
+    steps:
+      - checkout
+      - run:
+          name: Build App
+          command: dotnet build
+      - run:
+          name: Certificates
+          command: dotnet dev-certs https
+      - run:
+          name: Run App
+          command: dotnet run &

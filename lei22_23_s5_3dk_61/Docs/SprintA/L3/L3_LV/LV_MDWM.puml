@@ -1,0 +1,31 @@
+@startuml Diagram
+
+component "<<Component>> <<Container(C4)>> MDWM " {
+port SSOAPI
+
+component Repository <<Component>> {
+}
+component Service <<Component>> {
+}
+component Controller <<Component>> {
+}
+component DTO <<Component>> {
+}
+component EF <<Component>> {
+}
+component DomainModel <<Component>> {
+}
+
+component Persistence <<Component>> {
+}
+
+DomainModel -0)- Repository
+DomainModel --0)- Service
+EF -0)- Repository
+Controller -(0- Service
+Service -(0- Repository
+DTO  -0)- Service
+DTO -0)- Controller
+Persistence -0)- Repository
+}
+@enduml

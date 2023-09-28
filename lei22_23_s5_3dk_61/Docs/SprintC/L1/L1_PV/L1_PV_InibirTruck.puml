@@ -1,0 +1,43 @@
+@startuml Sequence Diagram
+autonumber
+
+actor FLEETMANAGER as LM
+
+participant "<<System>> <<Context C4>> ELETRIC GO" as SYS
+
+activate LM
+alt if Truck doesn't exist
+LM -> SYS: Starts to get the Truck
+activate SYS 
+SYS --> LM: Asks for data
+deactivate SYS
+LM-> SYS : Introduce the requested data
+activate SYS  
+
+alt if ok 
+
+
+LM <-- SYS: OK shows truck
+deactivate SYS
+
+LM -> SYS: changes truck active 
+activate SYS
+
+SYS --> LM: shows truck deactivated/occupied
+deactivate SYS 
+
+
+else error 
+ 
+
+LM <-- SYS: ERROR
+
+deactivate SYS
+
+
+
+end alt
+
+
+deactivate LM
+@enduml

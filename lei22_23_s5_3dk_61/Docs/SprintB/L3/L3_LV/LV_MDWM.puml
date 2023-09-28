@@ -1,0 +1,36 @@
+@startuml Diagram
+component "<<MASTERDATA>> <<Container(C4)>> WAREHOUSE" {
+
+ port UI
+component Repository <<Component>> {
+}
+component Service <<Component>> {
+}
+component DTO <<Component>> {
+}
+component DomainModel <<Component>> {
+}
+
+component Controller <<Component>> {
+}
+
+
+component EF <<Component>> {
+}
+
+
+component DataBase <<Component>> {
+}
+
+
+DomainModel --0)-- Repository
+DomainModel --0)-- Service
+EF --(0-- DataBase
+Controller --(0- Service
+Service -(0-- EF
+Controller -(0- UI
+DTO  --0)-- Service
+DTO --0)- Controller
+
+}
+@enduml

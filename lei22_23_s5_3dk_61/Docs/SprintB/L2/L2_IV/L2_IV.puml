@@ -1,0 +1,16 @@
+@startuml diagram
+top to bottom direction
+package EletricGo  <<Context (C4)>> {
+
+package UI 
+package WarehouseManagement 
+package LogisticManagement 
+package Planning 
+
+}
+
+UI -> WarehouseManagement
+UI -> LogisticManagement 
+Planning <-- LogisticManagement
+LogisticManagement <--> WarehouseManagement
+@enduml

@@ -1,0 +1,109 @@
+@startuml
+autonumber
+
+
+box "<<System>> EletricGO" #LightBlue
+'participant "<<System>> EletricGO" as E
+participant "SPA" as SPA
+participant "<<Container>> Warehouse Management" as WM
+participant "Planning" as PLAN
+participant "DeliveryController" as ctr
+participant "DeliveryService" as serv
+participant "DeliveryRepo" as repo
+participant "Delivery" as delivery
+participant "dto: DeliveryDTO" as dto
+
+
+
+alt create delivery
+    activate SPA
+    SPA -> WM: POST
+    
+    activate WM
+    create "dto: DeliveryDTO"
+    WM -> "dto: DeliveryDTO": create(data)
+    
+    WM -> ctr : create(dto)
+    activate ctr
+    ctr -> serv: AddAsync(dto)
+    activate serv
+    create "delivery: Delivery"
+    serv -> "delivery: Delivery": new Delivery(data)
+    serv -> repo: addAsync(delivery)
+    activate repo
+    deactivate repo
+    serv -> ctr: return DeliveryDto
+    deactivate serv
+    ctr -> WM: return DeliveryDto
+    deactivate ctr
+    WM -> SPA: return DeliveryDto
+    deactivate ctr
+    deactivate WM
+    deactivate SPA
+   
+
+    else edit the delivery
+        
+        SPA -> WM: PUT
+        activate SPA
+        activate WM
+        create "dto: DeliveryDto"
+        WM -> "dto: DeliveryDto": create(data)
+        
+        WM -> ctr: Update(deliveryIdentifier, dto)
+        activate ctr
+        ctr -> serv: UpdateAsync(dto)
+        
+        activate serv
+        serv -> repo: delivery = GetByDeliveryIdentifier( deliveryIdentifier )
+        activate repo
+        repo -> serv: return delivery
+        deactivate repo
+        serv -> delivery: delivery.ChangeDate(date)
+        activate delivery
+        deactivate delivery
+        serv -> delivery: delivery.ChangeMass(mass)
+        activate delivery
+        deactivate delivery
+        serv -> delivery: delivery.ChangeTimeLoad(timeLoad)
+        activate delivery
+        deactivate delivery
+        serv -> delivery: delivery.ChangeTimeUnload(timeUnload) 
+        activate delivery
+        deactivate delivery
+        serv -> ctr: return new DeliveryDto(delivery.data)
+        deactivate serv
+        ctr -> WM: return OK DeliveryDto
+        
+        WM -> SPA: 200 OK DeliveryDto
+        deactivate WM
+        deactivate SPA
+        deactivate ctr
+        
+        
+    else list the delivery
+  
+    SPA -> WM: GET
+    activate SPA
+    activate WM
+    WM -> ctr: GetAll()
+    activate ctr
+    ctr -> serv: GetAllAsync()
+    activate serv
+    serv -> repo: GetAllAsync()
+    activate repo
+    repo -> serv: list
+    deactivate repo
+    serv -> ctr: listDTO=convertAll(list)
+    deactivate serv
+    ctr -> WM: listDTO
+    deactivate ctr
+    WM -> SPA: 200 OK DeliveryDTOList
+    deactivate WM
+    deactivate SPA
+    end alt
+
+
+   deactivate WM
+end box
+@enduml

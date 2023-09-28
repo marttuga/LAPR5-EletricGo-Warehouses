@@ -1,0 +1,70 @@
+@startuml Sequence Diagram
+autonumber
+
+actor LOGISTICSMANAGER as LM
+
+participant "<<System>> <<Context C4>> ELETRIC GO" as SYS
+
+alt if Route doesn't exist
+LM -> SYS: Starts to create a Route
+activate SYS 
+SYS --> LM: Asks for data
+deactivate SYS
+LM-> SYS : Introduce the requested data
+activate SYS  
+
+alt if ok 
+
+
+LM <-- SYS: OK
+
+else error 
+ 
+
+LM <-- SYS: ERROR
+
+deactivate SYS
+
+
+
+end alt
+else if you want to edit the Route
+
+LM -> SYS: Starts to edit a Route
+activate SYS
+SYS --> LM: Asks for data
+deactivate SYS
+
+LM-> SYS : Introduce the requested data
+activate SYS
+alt if ok 
+LM <-- SYS: OK
+
+else error 
+
+  
+
+LM <-- SYS: ERROR
+deactivate SYS
+end alt
+
+else if you want to list the Route
+LM -> SYS: asks to list the Routes
+alt if ok 
+
+activate SYS
+
+ 
+LM <-- SYS: OK and shows list of Routes
+
+else error 
+
+
+LM <-- SYS: ERROR
+deactivate SYS
+
+
+end alt
+end alt
+
+@enduml

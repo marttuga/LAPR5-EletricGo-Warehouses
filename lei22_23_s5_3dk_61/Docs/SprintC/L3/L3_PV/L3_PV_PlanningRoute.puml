@@ -1,0 +1,187 @@
+@startuml Sequence Diagram
+autonumber
+
+actor Router as LM
+
+activate LM
+box "<<System>> EletricGO" #LightBlue
+'participant "<<System>> EletricGO" as E
+participant "View" as view
+participant "Planned Route" as plan
+participant "Planned Route Service" as serv
+end box
+
+  
+    LM -> view: Starts to list all routes on date
+    activate view
+    view --> LM: Asks for necessary data
+    deactivate view
+    LM-> view: Introduces the requested data
+    activate view
+
+    view -> plan: getAllRoutesOnDate(date)
+    
+    deactivate view
+    activate plan
+    plan -> serv: getAllRoutesOnDate
+    deactivate plan
+    activate serv
+
+    alt if ok
+
+    serv --> view: 200
+     
+    activate view
+    LM <-- view: OK
+    deactivate view
+   
+    else error
+    view <-- serv: 400/423
+    deactivate plan
+    activate view
+
+    deactivate serv
+    LM <-- view: ERROR
+    deactivate view
+
+    end alt
+
+     LM -> view: Asks for the best route
+     activate view
+     view --> LM: Asks for necessary data
+     deactivate view
+     LM-> view: Introduces the requested data
+     activate view
+
+     view -> plan: getBestRoute(date,truck)
+     deactivate view
+     activate plan
+
+    plan -> serv: getBestRoute
+    deactivate plan
+    activate serv
+
+   alt if ok
+
+    serv --> view: 200
+     
+    activate view
+    LM <-- view: OK
+    deactivate view
+   
+    else error
+    view <-- serv: 400/423
+    deactivate plan
+    activate view
+
+    deactivate serv
+    LM <-- view: ERROR
+    deactivate view
+
+    end alt
+
+    LM -> view: Asks for the nearest Warehouse
+    activate view
+    view --> LM: Asks for necessary data
+    deactivate view
+    LM-> view: Introduces the requested data
+    activate view
+
+    view -> plan: getNearestWarehouse(date,truck)
+    
+    deactivate view
+    activate plan
+    plan -> serv: getNearestWarehouse
+    deactivate plan
+    activate serv
+
+    alt if ok
+
+    serv --> view: 200
+     
+    activate view
+    LM <-- view: OK
+    deactivate view
+   
+    else error
+    view <-- serv: 400/423
+    deactivate plan
+    activate view
+
+    deactivate serv
+    LM <-- view: ERROR
+    deactivate view
+
+    end alt
+
+    LM -> view: Asks for the route where the delivery has the greater mass
+    activate view
+    view --> LM: Asks for necessary data
+    deactivate view
+    LM-> view: Introduces the requested data
+    activate view
+
+    view -> plan: getRouteGreaterMass(date,truck)
+    
+    deactivate view
+    activate plan
+    plan -> serv: getRouteGreaterMass
+    deactivate plan
+    activate serv
+
+    alt if ok
+
+    serv --> view: 200
+     
+    activate view
+    LM <-- view: OK
+    deactivate view
+   
+    else error
+    view <-- serv: 400/423
+    deactivate plan
+    activate view
+
+    deactivate serv
+    LM <-- view: ERROR
+    deactivate view
+
+    end alt
+
+    LM -> view: Asks for the route with best relation
+    activate view
+    view --> LM: Asks for necessary data
+    deactivate view
+    LM-> view: Introduces the requested data
+    activate view
+
+    view -> plan: getRouteBestRelation(date,truck)
+    
+    deactivate view
+    activate plan
+    plan -> serv: getRouteBestRelation
+    deactivate plan
+    activate serv
+
+    alt if ok
+
+    serv --> view: 200
+     
+    activate view
+    LM <-- view: OK
+    deactivate view
+   
+    else error
+    view <-- serv: 400/423
+    deactivate plan
+    activate view
+
+    deactivate serv
+    LM <-- view: ERROR
+    deactivate view
+
+    end alt
+
+  deactivate LM
+
+@enduml

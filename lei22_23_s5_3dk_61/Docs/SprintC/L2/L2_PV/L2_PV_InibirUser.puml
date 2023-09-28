@@ -1,0 +1,63 @@
+@startuml Sequence Diagram
+autonumber
+
+actor ADMIN as LM
+
+activate LM
+box "<<System>> EletricGO" #LightBlue
+'participant "<<System>> EletricGO" as E
+participant "UI" as UI
+participant "Logistic" as LOGI
+participant "WM" as WM
+participant "Planning" as PLAN
+end box
+
+    
+            LM -> UI: asks to list the users
+            activate UI
+            UI -> LOGI: getusers()
+            deactivate UI
+            activate LOGI
+            alt if ok
+
+                LOGI --> UI: 200  
+                activate UI 
+                deactivate LOGI
+                LM <-- UI: OK and shows list of users
+deactivate UI
+            LM -> UI: changes user active 
+            activate UI
+
+            alt disable user
+            UI -> LOGI: changeuserInactivate()
+            activate LOGI
+
+            LOGI --> UI: 200
+
+                LM <-- UI: OK and inactivates user
+
+            else enables user
+             UI -> LOGI: changeuserActivate()
+
+
+            LOGI --> UI: 200
+
+                LM <-- UI: OK and Activates user
+                deactivate UI
+            end alt 
+
+            else error
+                UI <-- LOGI: 400/423
+                deactivate LOGI
+                activate UI
+
+                LM <-- UI: ERROR
+                deactivate UI
+
+                end alt
+            
+
+
+                deactivate LM
+
+                @enduml

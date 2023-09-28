@@ -1,0 +1,5 @@
+Análise da US de listar as entregas por página
+
+Esta US tem como principal objetivo a listagem por página (web) de um número definido de entregas. Ou seja,
+vão ser mostradas todas as entregas existentes na base de dados, mas com uma limitação do número de entregas
+a apresentar, numa lista na página web.

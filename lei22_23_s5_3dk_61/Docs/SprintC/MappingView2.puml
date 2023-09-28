@@ -1,0 +1,52 @@
+@startuml diagram
+
+
+node localhost as LH {
+ 
+  component browser <<Component>> {
+  }
+ 
+}
+
+node server1 as S1 {
+    component HTTPServer <<Component>> {
+  }
+   package UI{
+
+    component UI_A <<Artifact>> {
+  }
+
+  component UI_C <<Component>> {
+  }
+
+UI_A ..> UI_C
+
+}
+
+}
+node server2 as S2 {
+  component MDWM_A <<Artifact>> {
+  }
+  component MDL_A <<Artifact>> {
+  }
+  component HTTPServer_A <<Artifact>> {
+  }
+
+  component MDWM_C <<Component>> {
+  }
+  component MDL_C <<Component>> {
+  }
+  component HTTPServer_C <<Component>> {
+  }
+
+MDWM_A ..> MDWM_C
+MDL_A ..> MDL_C
+HTTPServer_A ..> HTTPServer_C
+
+}
+
+LH -->S1
+LH -->S2
+
+
+@enduml 

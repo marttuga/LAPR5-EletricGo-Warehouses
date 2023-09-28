@@ -1,0 +1,107 @@
+@startuml Sequence Diagram
+autonumber
+
+actor LOGISTICMANAGER as LOGM
+
+activate LOGM
+box "<<System>> EletricGO" #LightBlue
+'participant "<<System>> EletricGO" as E
+participant "UI" as UI
+participant "LOGISTICS_M" as LM
+participant "WAREHOUSE_M" as WM
+participant "Planning" as PLAN
+end box
+
+alt if Route doesn't exist
+LOGM -> UI: Starts to create a Route
+activate UI
+UI --> LOGM: Asks for data
+deactivate UI
+LOGM-> UI: Introduce the requested data
+activate UI
+UI -> WM: GET /Warehouses
+activate WM
+WM -> UI: 200
+deactivate WM
+UI -> LM: POST
+deactivate UI
+activate LM
+alt if ok 
+
+LM --> UI: 201 
+activate UI
+LOGM <-- UI: OK
+deactivate UI
+else error 
+UI <-- LM: 400/423
+deactivate LM
+activate UI
+
+LOGM <-- UI: ERROR
+deactivate UI
+
+
+end alt
+else if you want to edit the Route
+
+LOGM -> UI: Starts to edit a Route
+activate UI
+UI --> LOGM: Asks for data
+deactivate UI
+
+LOGM-> UI: Introduce the requested data
+
+activate UI
+UI -> WM: GET /Warehouses
+activate WM
+WM -> UI: 200
+deactivate WM
+UI -> LM: PUT
+deactivate UI
+activate LM
+alt if ok 
+
+LM --> UI: 200
+activate UI
+LOGM <-- UI: OK
+deactivate UI
+else error 
+UI <-- LM: 400/423
+deactivate LM
+activate UI
+
+LOGM <-- UI: ERROR
+deactivate UI
+end alt
+
+else if you want to list the Route
+LOGM -> UI: asks to list the Routes
+activate UI
+UI -> WM: GET /Warehouses
+activate WM
+WM -> UI: 200
+deactivate WM
+UI -> LM: GET
+deactivate UI
+activate LM
+alt if ok 
+
+LM --> UI: 200
+activate UI
+LOGM <-- UI: OK and shows list of Routes
+deactivate UI
+else error 
+UI <-- LM: 400/423
+deactivate LM
+activate UI
+
+LOGM <-- UI: ERROR
+deactivate UI
+
+end alt
+end alt
+
+
+deactivate LOGM
+
+@enduml

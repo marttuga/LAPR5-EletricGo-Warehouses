@@ -1,0 +1,95 @@
+@startuml Sequence Diagram
+autonumber
+
+actor FLEETMANAGER as LM
+
+activate LM
+box "<<System>> EletricGO" #LightBlue
+'participant "<<System>> EletricGO" as E
+participant "SPA" as SPA
+participant "Logistic" as LOGI
+participant "WM" as WM
+participant "Planning" as PLAN
+end box
+
+alt if truck doesn't exist
+    LM -> SPA: Starts to create a truck
+    activate SPA
+    SPA --> LM: Asks for data
+    deactivate SPA
+    LM-> SPA: Introduce the requested data
+    activate SPA
+    SPA -> LOGI: POST
+    deactivate SPA
+    activate LOGI
+    alt if ok
+
+        LOGI --> SPA: 201
+        activate SPA
+        LM <-- SPA: CREATED
+        deactivate SPA
+    else error
+        SPA <-- LOGI: 400/423
+        deactivate LOGI
+        activate SPA
+
+        LM <-- SPA: ERROR
+        deactivate SPA
+
+
+        end alt
+    else if you want to edit the truck
+
+        LM -> SPA: Starts to edit a truck
+        activate SPA
+        SPA --> LM: Asks for data
+        deactivate SPA
+
+        LM-> SPA: Introduce the requested data
+
+        activate SPA
+        SPA -> LOGI: UPDATE
+        deactivate SPA
+        activate LOGI
+        alt if ok
+
+            LOGI --> SPA: 200
+            activate SPA
+            LM <-- SPA: OK
+            deactivate SPA
+        else error
+            SPA <-- LOGI: 400/423
+            deactivate LOGI
+            activate SPA
+
+            LM <-- SPA: ERROR
+            deactivate SPA
+            end alt
+
+        else if you want to list the truck
+            LM -> SPA: asks to list the trucks
+            activate SPA
+            SPA -> LOGI: GET
+            deactivate SPA
+            activate LOGI
+            alt if ok
+
+                LOGI --> SPA: 200
+                activate SPA
+                LM <-- SPA: OK and shows list of trucks
+                deactivate SPA
+            else error
+                SPA <-- LOGI: 400/423
+                deactivate LOGI
+                activate SPA
+
+                LM <-- SPA: ERROR
+                deactivate SPA
+
+                end alt
+                end alt
+
+
+                deactivate LM
+
+                @enduml

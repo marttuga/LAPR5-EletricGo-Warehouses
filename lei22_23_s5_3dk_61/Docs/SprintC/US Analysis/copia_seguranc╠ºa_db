@@ -1,0 +1,5 @@
+Análise da US da cópia de segurança de DB para um abiente de cloud através de um script.
+
+Nesta US é necessário a realização de um script que faça um backup da base de dados existente.
+Para este script é preciso ter em conta:renomeie <nome_da_db>_yyyymmdd sendo <nome_da_db> o nome da base de
+dados; yyyy o ano da realização da copia; mm o mês da realização da copia; dd o dia da realização da copia

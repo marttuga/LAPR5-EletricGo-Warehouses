@@ -1,0 +1,142 @@
+@startuml Sequence Diagram
+autonumber
+
+
+
+
+box "<<System>> EletricGO" #LightBlue
+'participant "<<System>> EletricGO" as E
+participant "UI" as UI
+participant "Logistic" as LOGI
+participant "WM" as WM
+participant "Planning" as PLAN
+participant "TruckController" as ctr
+participant "TruckService" as serv
+participant "TruckRepo" as repo
+participant "Truck" as truck
+participant "TruckMap" as map
+
+end box
+
+alt create truck
+
+    activate UI
+    UI -> LOGI: POST
+    deactivate UI
+    activate LOGI
+    LOGI -> ctr: createTruck(req, res, next)
+    deactivate LOGI
+    activate ctr
+    ctr -> serv: createTruck( truckDTO)
+    deactivate ctr
+    activate serv
+   
+    serv -> repo:truck= findLicencePlate(licencePlate)
+    activate repo
+    serv -> truck: create(truckDTO)
+    deactivate repo
+    activate truck
+
+    alt if ok
+    serv -> repo: Save(truck)
+    deactivate truck
+    activate repo
+    serv -> map: toDTO(truck)
+    deactivate repo
+    activate map
+
+    serv --> UI: 201 (CREATED)
+     activate UI
+    deactivate map
+    
+    deactivate UI
+   
+   
+    else error
+    
+    UI <-- serv: 400/423 (ERROR)
+    activate UI
+    deactivate LOGI
+    deactivate serv
+
+    end alt
+
+    else edit the truck
+
+    UI -> LOGI: UPDATE
+       deactivate UI
+    activate LOGI
+    LOGI -> ctr: updateTruck(req, res, next)
+    deactivate LOGI
+    activate ctr
+    ctr -> serv: updateTruck( truckDTO)
+    deactivate ctr
+    activate serv
+   
+    serv -> repo: truck=findLicencePlate(licencePlate)
+    activate repo
+    serv -> truck: update(truck)
+    deactivate repo
+    activate truck
+
+    alt if ok
+    serv -> repo: Save(truck)
+    deactivate truck
+    activate repo
+    serv -> map: toDTO(truck)
+    deactivate repo
+    activate map
+
+    serv --> UI: 200 OK
+    activate UI
+    deactivate map
+    
+    deactivate UI
+   
+    else error
+    UI <-- serv: 400/423 ERROR
+    activate UI
+    deactivate LOGI
+    deactivate serv
+
+    end alt
+
+        else list the truck
+        UI -> LOGI: GET
+            deactivate UI
+    activate LOGI
+    LOGI -> ctr: getTrucks(req, res, next)
+    deactivate LOGI
+    activate ctr
+    ctr -> serv: getTrucks( truckDTO)
+    deactivate ctr
+    activate serv
+   
+    serv -> repo: truckList=getAllTrucks(licencePlate)
+    activate repo
+    deactivate repo
+
+    alt if ok
+    
+    serv -> map: toDTO(trucks)
+    activate map
+
+    serv --> UI: 200 OK
+  activate UI
+    deactivate map
+    
+    deactivate UI
+   
+    else error
+    UI <-- serv: 400/423 ERROR
+    activate UI
+    deactivate LOGI
+    deactivate serv
+deactivate UI
+    end alt
+  end alt
+
+
+               
+
+                @enduml

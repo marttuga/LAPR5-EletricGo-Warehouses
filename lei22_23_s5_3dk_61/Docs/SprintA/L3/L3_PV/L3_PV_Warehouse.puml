@@ -1,0 +1,135 @@
+@startuml Sequence Diagram
+autonumber
+
+actor WAREHOUSEMANAGER as WMR
+
+activate WMR
+box "<<System>> EletricGO" #LightBlue
+'participant "<<System>> EletricGO" as E
+participant "SPA" as SPA
+participant "<<Container>> Warehouse Management" as WM
+participant "WarehouseController" as ctr
+participant "WarehouseService" as serv
+participant "WarehouseRepo" as repo
+participant "Warehouse" as warehouse
+
+
+
+alt create warehouse
+    WMR -> SPA: Starts to create a warehouse
+    activate SPA
+    SPA --> WMR: Asks for necessary data
+    deactivate SPA
+    WMR-> SPA: Introduces the requested data
+    activate SPA
+
+    SPA -> WM: POST
+    
+    activate WM
+    create "dto: WarehouseDTO"
+    WM -> "dto: WarehouseDTO": create(data)
+    
+    WM -> ctr : create(dto)
+    activate ctr
+    ctr -> serv: AddAsync(dto)
+    activate serv
+    create "warehouse: Warehouse"
+    serv -> "warehouse: Warehouse": new Warehouse(data)
+    serv -> repo: addAsync(warehouse)
+    activate repo
+    deactivate repo
+    serv -> ctr: return WarehouseDto
+    deactivate serv
+    ctr -> WM: return WarehouseDto
+    deactivate ctr
+    WM -> SPA: return WarehouseDto
+    deactivate ctr
+    deactivate WM
+    SPA -> WMR: New warehouse is saved and persisted returning operation success
+    deactivate SPA
+    
+    
+    
+    
+
+     
+
+
+
+
+
+    else edit the warehouse
+
+        WMR -> SPA: Starts to edit a warehouse
+        activate SPA
+        SPA --> WMR: Asks for warehouseId and data to be changed
+        deactivate SPA
+        WMR -> SPA: Introduces warehouseId and data
+        activate SPA
+        SPA -> WM: PUT
+        activate WM
+        create "dto: WarehouseDto"
+        WM -> "dto: WarehouseDto": create(data)
+        
+        WM -> ctr: Update(warehouseId, dto)
+        activate ctr
+        ctr -> serv: UpdateAsync(dto)
+        
+        activate serv
+        serv -> repo: warehouse = GetByWarehouseId( warehouseid )
+        activate repo
+        repo -> serv: return warehouse
+        deactivate repo
+        serv -> warehouse: warehouse.ChangeDesignation(designation)
+        activate warehouse
+        deactivate warehouse
+        serv -> warehouse: warehouse.ChangeAddress(street,city,doorNumber,zipCode)
+        activate warehouse
+        deactivate warehouse
+        serv -> warehouse: warehouse.ChangeCoordinate(latitude,longitude)
+        activate warehouse
+        deactivate warehouse
+        serv -> warehouse: warehouse.ChangeLatitude(altitude) 
+        activate warehouse
+        deactivate warehouse
+        serv -> ctr: return new WarehouseDto(warehouse.data)
+        deactivate serv
+        ctr -> WM: return OK WarehouseDto
+        
+        WM -> SPA: 200 OK WarehouseDto
+        SPA -> WMR: Warehouse updated succefully and persisted!
+        deactivate WM
+        deactivate SPA
+        deactivate ctr
+        
+        
+
+
+
+    else list the warehouse
+    WMR -> SPA: Starts to list warehouses
+    activate SPA
+    SPA -> WM: GET
+    activate WM
+    WM -> ctr: GetAll()
+    activate ctr
+    ctr -> serv: GetAllAsync()
+    activate serv
+    serv -> repo: GetAllAsync()
+    activate repo
+    repo -> serv: list
+    deactivate repo
+    serv -> ctr: listDTO=convertAll(list)
+    deactivate serv
+    ctr -> WM: listDTO
+    deactivate ctr
+    WM -> SPA: 200 OK WarehouseDTOList
+    deactivate WM
+    SPA -> WMR: Returns all warehouses
+    deactivate SPA
+    end alt
+
+
+                deactivate WM
+end box
+                @enduml

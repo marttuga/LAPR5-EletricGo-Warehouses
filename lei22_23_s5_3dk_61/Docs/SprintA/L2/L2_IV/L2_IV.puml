@@ -1,0 +1,16 @@
+@startuml
+package EletricGo  <<Context (C4)>> {
+
+package SPA 
+package WarehouseManagement 
+package LogisticManagement 
+package Planning 
+
+}
+
+SPA -> WarehouseManagement
+SPA -> LogisticManagement 
+LogisticManagement -> Planning
+Planning -> WarehouseManagement
+Planning --> LogisticManagement
+@enduml

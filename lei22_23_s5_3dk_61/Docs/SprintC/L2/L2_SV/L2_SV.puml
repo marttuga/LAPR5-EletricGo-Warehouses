@@ -1,0 +1,65 @@
+@startuml diagram
+left to right direction
+
+package SystemUsers {
+      actor "Warehouse Manager" as WM
+    actor "Fleet Manager" as FM
+    actor "Logistics Manager" as LM
+    actor "Administrator" as ADMIN
+    actor "User" as USER
+    actor "Client" as CLIENT
+}
+package system {
+usecase "Create Warehouse" as UC1C
+  usecase "Create Delivery" as UC2C
+  usecase "Create Truck" as UC3C
+  usecase "Create route between two warehouses" as UC3L
+  usecase "Plan route for a truck on a certain day" as UC3E
+  usecase "View the road network graphically in 3D" as UC4C
+  usecase "View graphically the existing warehouses, create or import the 3D models" as UC4L
+  usecase "Control the display. Add the pan, zoom and orbit controls" as UC4E
+  usecase "Create an user account with a cellphone number" as UC5
+  usecase "Cancel an user account by anonymizing the pessoal data" as UC6
+  usecase "Authenticate via SSO" as UC7
+  usecase "Get the planned route of all fleet and visualize the best solution with the generic algorithm" as UC8
+  usecase "View graphicaly a truck, and create or import the model 3D" as UC9
+  usecase "Increase the realism of the graphic representation with the right light and mapping textures" as UC10
+  usecase "Animate the manual and automatic movement of the truck the view the planned route" as UC11
+  usecase "Want a report considering the RGPD" as UC12
+  usecase "Plan the fleet and persist the solution" as UC13
+  usecase "Need a solution to the problem using the generic algorithm" as UC14
+  usecase "Need predicates that permits the atribution of deliveries to a fleet of trucks" as UC15
+  usecase "Need a bibliographic study about machine learning" as UC16
+  usecase "Need a Disaster Recovery Plan" as UC17
+  usecase "Need a DB mirroring script to a cloud environment" as UC18
+}
+
+
+WM --> UC1C
+WM --> UC2C
+
+FM --> UC3C
+LM --> UC3L
+LM --> UC3E
+LM --> UC4C
+LM --> UC4L
+LM --> UC4E
+LM --> UC8
+LM --> UC9
+LM --> UC10
+LM --> UC11
+LM --> UC13
+LM --> UC14
+LM --> UC15
+
+CLIENT --> UC12
+CLIENT --> UC16
+CLIENT --> UC17
+
+
+ADMIN --> UC5
+ADMIN --> UC6
+ADMIN --> UC18
+
+USER --> UC7
+@enduml

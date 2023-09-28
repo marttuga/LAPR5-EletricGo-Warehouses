@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="820px" preserveAspectRatio="none" style="width:723px;height:820px;background:#FFFFFF;" version="1.1" viewBox="0 0 723 820" width="723px" zoomAndPan="magnify"><defs/><g><!--MD5=[e5713ecc3602858e5061702e1e4a291d]
+cluster SystemUsers--><g id="cluster_SystemUsers"><path d="M8.5,87 L100.5,87 A3.75,3.75 0 0 1 103,89.5 L110,110.6094 L168.5,110.6094 A2.5,2.5 0 0 1 171,113.1094 L171,440.5 A2.5,2.5 0 0 1 168.5,443 L8.5,443 A2.5,2.5 0 0 1 6,440.5 L6,89.5 A2.5,2.5 0 0 1 8.5,87 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="6" x2="110" y1="110.6094" y2="110.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="91" x="10" y="103.5332">SystemUsers</text></g><!--MD5=[1884200dc22ed3c550fccd23648b75db]
+cluster WarehouseManagement--><g id="cluster_WarehouseManagement"><path d="M361.5,6 L533.5,6 A3.75,3.75 0 0 1 536,8.5 L543,29.6094 L553.5,29.6094 A2.5,2.5 0 0 1 556,32.1094 L556,162.5 A2.5,2.5 0 0 1 553.5,165 L361.5,165 A2.5,2.5 0 0 1 359,162.5 L359,8.5 A2.5,2.5 0 0 1 361.5,6 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="359" x2="543" y1="29.6094" y2="29.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="171" x="363" y="22.5332">WarehouseManagement</text></g><!--MD5=[31a1161e5ccd55112f62faa2a6ab15d7]
+cluster Logistics--><g id="cluster_Logistics"><path d="M201.5,189 L265.5,189 A3.75,3.75 0 0 1 268,191.5 L275,212.6094 L713.5,212.6094 A2.5,2.5 0 0 1 716,215.1094 L716,810.5 A2.5,2.5 0 0 1 713.5,813 L201.5,813 A2.5,2.5 0 0 1 199,810.5 L199,191.5 A2.5,2.5 0 0 1 201.5,189 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="199" x2="275" y1="212.6094" y2="212.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="63" x="203" y="205.5332">Logistics</text></g><!--MD5=[34d31f55fcb8b2e5dee86c97beff104b]
+entity WM--><g id="elem_WM"><ellipse cx="88.5" cy="131.5" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M88.5,139.5 L88.5,166.5 M75.5,147.5 L101.5,147.5 M88.5,166.5 L75.5,181.5 M88.5,166.5 L101.5,181.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="133" x="22" y="197.5332">Warehouse Manager</text></g><!--MD5=[a89ee74bb4979dbed373b93afc1c36e4]
+entity FM--><g id="elem_FM"><ellipse cx="88.5" cy="244.5" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M88.5,252.5 L88.5,279.5 M75.5,260.5 L101.5,260.5 M88.5,279.5 L75.5,294.5 M88.5,279.5 L101.5,294.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="42.5" y="310.5332">Fleet Manager</text></g><!--MD5=[4ff3548512ed7536ef7376856685bd64]
+entity LM--><g id="elem_LM"><ellipse cx="88.5" cy="357.5" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M88.5,365.5 L88.5,392.5 M75.5,373.5 L101.5,373.5 M88.5,392.5 L75.5,407.5 M88.5,392.5 L101.5,407.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="31" y="423.5332">Logistics Manager</text></g><g id="elem_UC1C"><ellipse cx="457.3351" cy="60.867" fill="#F1F1F1" rx="82.3351" ry="18.867" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="120" x="397.3351" y="64.5955">Create Warehouse</text></g><g id="elem_UC2C"><ellipse cx="457.7427" cy="132.1485" fill="#F1F1F1" rx="73.7427" ry="17.1485" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="405.7427" y="136.6651">Create Delivery</text></g><g id="elem_UC3C"><ellipse cx="457.4277" cy="241.0855" fill="#F1F1F1" rx="68.4277" ry="16.0855" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="412.9277" y="245.6021">Create Truck</text></g><g id="elem_UC3L"><ellipse cx="457.4138" cy="321.8828" fill="#F1F1F1" rx="137.4138" ry="29.8828" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="242" x="336.4138" y="325.6113">Create route between two warehouses</text></g><g id="elem_UC3E"><ellipse cx="457.4974" cy="417.0995" fill="#F1F1F1" rx="135.9974" ry="29.5995" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="239" x="337.9974" y="420.828">Plan route for a truck on a certain day</text></g><g id="elem_UC4C"><ellipse cx="457.2518" cy="511.9504" fill="#F1F1F1" rx="140.2518" ry="30.4504" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="248" x="333.2518" y="515.6789">View the road network graphically in 3D</text></g><g id="elem_UC4L"><ellipse cx="457.5795" cy="628.9159" fill="#F1F1F1" rx="242.5795" ry="50.9159" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="459" x="228.0795" y="632.6444">View graphically the existing warehouses, create or import the 3D models</text></g><g id="elem_UC4E"><ellipse cx="457.6659" cy="756.0332" fill="#F1F1F1" rx="193.1659" ry="41.0332" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="358" x="278.6659" y="759.7617">Control the display. Add the pan, zoom and orbit controls</text></g><!--MD5=[5bdd412f3071822e5ce93f551a60d9ff]
+link WM to UC1C--><g id="link_WM_UC1C"><path d="M140.93,122.97 C156.32,113.02 173.72,103.35 191,97 C248.52,75.86 317.16,66.94 370.23,63.27 " fill="none" id="WM-to-UC1C" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="375.32,62.93,366.0668,59.5569,370.3318,63.273,366.6156,67.538,375.32,62.93" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[45faf411cd2eacde7d69e8b9d4790e3e]
+link WM to UC2C--><g id="link_WM_UC2C"><path d="M155.11,156.64 C219.11,151.41 316.29,143.46 382.89,138.02 " fill="none" id="WM-to-UC2C" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="388.03,137.6,378.7389,134.3326,383.046,137.9999,379.3787,142.3069,388.03,137.6" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[211618c910d555766ef4d6a3a94d81e8]
+link FM to UC3C--><g id="link_FM_UC3C"><path d="M134.5,270.83 C197.96,264.95 314.25,254.18 388.35,247.31 " fill="none" id="FM-to-UC3C" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="393.61,246.83,384.2815,243.6709,388.631,247.2878,385.0141,251.6373,393.61,246.83" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[7503f96e7856926a0baffaf8d91a492e]
+link LM to UC3L--><g id="link_LM_UC3L"><path d="M146.04,377.83 C199.05,368.3 279.78,353.78 345.63,341.94 " fill="none" id="LM-to-UC3L" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="350.75,341.02,341.1844,338.675,345.8288,341.9044,342.5994,346.5488,350.75,341.02" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[3e269715b44d34336ec1aec942a3cd59]
+link LM to UC3E--><g id="link_LM_UC3E"><path d="M146.04,392.47 C193.47,396.22 263.08,401.72 324.38,406.56 " fill="none" id="LM-to-UC3E" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="329.53,406.97,320.8653,402.2877,324.5449,406.5843,320.2483,410.2639,329.53,406.97" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[1c7ed2f13fc1e127d1d787adf0d2b3f5]
+link LM to UC4C--><g id="link_LM_UC4C"><path d="M132.65,427.29 C149.72,440.87 170.21,454.95 191,464 C231.73,481.74 278.72,492.92 321.75,499.97 " fill="none" id="LM-to-UC4C" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="326.7,500.77,318.4547,495.3834,321.7642,499.9711,317.1765,503.2807,326.7,500.77" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[da2fc6d5bf740e1f40ff76418659acd1]
+link LM to UC4L--><g id="link_LM_UC4L"><path d="M102.5,427.23 C117.59,466.66 146.29,526.29 191,560 C211.23,575.25 234.52,587.15 258.73,596.42 " fill="none" id="LM-to-UC4L" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="263.58,598.24,256.5575,591.3346,258.8984,596.4844,253.7485,598.8252,263.58,598.24" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[92f42c8f5decebb5e50189ea65bc2aa3]
+link LM to UC4E--><g id="link_LM_UC4E"><path d="M90.54,427 C94.51,492.85 112.43,625.83 191,697 C213.5,717.38 241.43,731.24 270.66,740.58 " fill="none" id="LM-to-UC4E" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="275.75,742.15,268.3406,735.6615,270.9748,740.6676,265.9687,743.3017,275.75,742.15" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[965bc2fb2854d1a2be5b00e784fe8c2b]
+@startuml diagram
+left to right direction
+
+package SystemUsers {
+    actor "Warehouse Manager" as WM
+    actor "Fleet Manager" as FM
+    actor "Logistics Manager" as LM
+}
+package WarehouseManagement {
+  usecase "Create Warehouse" as UC1C
+  usecase "Create Delivery" as UC2C
+}
+
+package Logistics {
+  usecase "Create Truck" as UC3C
+  usecase "Create route between two warehouses" as UC3L
+  usecase "Plan route for a truck on a certain day" as UC3E
+  usecase "View the road network graphically in 3D" as UC4C
+  usecase "View graphically the existing warehouses, create or import the 3D models" as UC4L
+  usecase "Control the display. Add the pan, zoom and orbit controls" as UC4E
+
+}
+
+WM - -> UC1C
+WM - -> UC2C
+
+FM - -> UC3C
+LM - -> UC3L
+LM - -> UC3E
+LM - -> UC4C
+LM - -> UC4L
+LM - -> UC4E
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 20:01:30 EEST 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

@@ -1,0 +1,32 @@
+@startuml diagram IV_UI
+top to bottom direction
+
+package "EletricGO UI"{
+
+package Infrastructure{
+    
+    package Routes
+    
+}
+
+package InterfaceAdapters{
+    
+    package View
+
+    package Component 
+    
+}
+
+package Entities/Core/Domain {
+    package Services 
+
+    package Model
+    
+}
+}
+
+Routes ..> View
+View ..>Controllers
+Controllers ..> Services
+Controllers ..> Model
+@enduml

@@ -1,0 +1,71 @@
+@startuml Sequence Diagram
+autonumber
+
+actor Router as WM
+
+activate WM
+box "<<System>> EletricGO" #LightBlue
+'participant "<<System>> EletricGO" as E
+participant "Views" as Views
+participant "CreateWarehouseTS" as ctr
+participant "WarehouseService" as serv
+end box
+    WM -> Views: Starts to create a warehouse
+    activate Views
+    Views --> WM: Asks for data
+    deactivate Views
+    WM-> Views: Introduce the requested data
+    activate Views
+    Views -> ctr: createWarehouse()
+    deactivate Views
+    activate ctr
+    ctr -> serv: createWarehouse
+    deactivate ctr
+    activate serv
+    alt if ok
+    serv --> Views: 201
+    activate Views
+    WM <-- Views: CREATED
+    deactivate Views
+    else error
+    Views <-- serv: 400/423
+    deactivate ctr
+    activate Views
+    deactivate serv
+    WM <-- Views: ERROR
+    deactivate Views
+end alt
+
+
+            WM -> Views: asks to list the warehouses
+            activate Views
+            Views -> ctr: getWarehouses()
+            deactivate Views
+            activate ctr
+
+    ctr -> serv: getWarehouses
+    deactivate ctr
+    activate serv
+   
+ 
+
+    alt if ok
+    
+
+    serv --> Views: 200
+     
+    activate Views
+    WM <-- Views: OK
+    deactivate Views
+   
+    else error
+    Views <-- serv: 400/423
+    deactivate ctr
+    activate Views
+
+    deactivate serv
+    WM <-- Views: ERROR
+    deactivate Views
+    end alt
+    deactivate WM
+    @enduml

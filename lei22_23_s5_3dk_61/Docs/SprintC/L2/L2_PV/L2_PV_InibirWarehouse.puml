@@ -1,0 +1,62 @@
+@startuml Sequence Diagram
+autonumber
+
+actor WAREHOUSEMANAGER as LM
+activate LM
+box "<<System>> EletricGO" #LightBlue
+'participant "<<System>> EletricGO" as E
+participant "UI" as UI
+participant "WM" as WM
+participant "logistic" as logi
+participant "Planning" as PLAN
+end box
+
+    
+            LM -> UI: asks to list the warehouses
+            activate UI
+            UI -> WM: getwarehouses()
+            deactivate UI
+            activate WM
+            alt if ok
+
+                WM --> UI: 200  
+                activate UI 
+                deactivate WM
+                LM <-- UI: OK and shows list of warehouses
+deactivate UI
+            LM -> UI: changes warehouse active 
+            activate UI
+
+            alt disable warehouse
+            UI -> WM: changewarehouseInactivate()
+            activate WM
+
+            WM --> UI: 200
+
+                LM <-- UI: OK and inactivates warehouse
+
+            else enables warehouse
+             UI -> WM: changewarehouseActivate()
+
+
+            WM --> UI: 200
+
+                LM <-- UI: OK and Activates warehouse
+                deactivate UI
+            end alt 
+
+            else error
+                UI <-- WM: 400/423
+                deactivate WM
+                activate UI
+
+                LM <-- UI: ERROR
+                deactivate UI
+
+                end alt
+            
+
+
+                deactivate LM
+
+                @enduml

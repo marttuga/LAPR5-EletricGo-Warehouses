@@ -1,0 +1,93 @@
+@startuml Sequence Diagram
+autonumber
+
+actor WAREHOUSEMANAGER as WMR
+
+activate WMR
+box "<<System>> EletricGO" #LightBlue
+'participant "<<System>> EletricGO" as E
+participant "UI" as UI
+participant "WM" as WM
+participant "Logistic" as LOG
+participant "Planning" as PLAN
+end box
+
+alt if you want to create the delivery
+    WMR -> UI: Starts to create a Delivery
+    activate UI
+    UI --> WMR: Asks for data
+    deactivate UI
+    WMR-> UI: Introduce the requested data
+    activate UI
+    UI -> WM: POST
+    deactivate UI
+    activate WM
+    alt if ok 
+
+        WM --> UI: 201 
+        activate UI
+        WMR <-- UI: CREATED
+        deactivate UI
+
+    else error 
+        UI <-- WM: 400/423
+        deactivate WM
+        activate UI
+        WMR <-- UI: ERROR
+        deactivate UI
+
+        end alt
+    else if you want to edit the delivery
+
+        WMR -> UI: Starts to edit a Delivery
+        activate UI
+        UI --> WMR: Asks for data
+        deactivate UI
+
+        WMR-> UI: Introduce the requested data
+
+        activate UI
+        UI -> WM: POST
+        deactivate UI
+        activate WM
+
+        alt if ok 
+
+            WM --> UI: 200
+            activate UI
+            WMR <-- UI: OK
+            deactivate UI
+        else error 
+            UI <-- WM: 400/423
+            deactivate WM
+            activate UI
+
+            WMR <-- UI: ERROR
+            deactivate UI
+            end alt
+
+        else if you want to list the deliveries
+            WMR -> UI: asks to list the Deliveries
+            activate UI
+            UI -> WM: getDeliveries()
+            deactivate UI
+            activate WM
+            alt if ok 
+
+                WM --> UI: 200
+                activate UI
+                WMR <-- UI: OK and shows list of deliveries
+                deactivate UI
+            else error 
+                UI <-- WM: 400/423
+                deactivate WM
+                activate UI
+
+                WMR <-- UI: ERROR
+                deactivate UI
+
+                end alt
+                end alt
+                deactivate WMR
+
+@enduml

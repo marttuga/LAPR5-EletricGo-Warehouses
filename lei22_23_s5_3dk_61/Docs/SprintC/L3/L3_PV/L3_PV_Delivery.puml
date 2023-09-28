@@ -1,0 +1,83 @@
+@startuml
+autonumber
+
+actor Router as WM
+
+activate WM
+box "<<System>> EletricGO" #LightBlue
+'participant "<<System>> EletricGO" as E
+participant "View" as view
+participant "CreateDeliveryTS" as ctr
+participant "DeliveryService" as serv
+end box
+
+
+  
+    WM -> view: Starts to create a delivery
+   note left
+   create delivery
+   end note
+    activate view
+    view --> WM: Asks for necessary data
+    deactivate view
+    WM-> view: Introduces the requested data
+    activate view
+
+    view -> ctr: createDelivery()
+    
+    deactivate view
+    activate ctr
+    ctr -> serv: createDelivery
+    deactivate ctr
+    activate serv
+
+    alt if ok
+
+    serv --> view: 201
+     
+    activate view
+    WM <-- view: CREATED
+    deactivate view
+   
+    else error
+    view <-- serv: 400/423
+    deactivate ctr
+    activate view
+
+    deactivate serv
+    WM <-- view: ERROR
+    deactivate view
+
+    end alt
+
+     WM -> view: asks to list the deliveries
+     activate view
+     view -> ctr: getAllDeliveries()
+     deactivate view
+     activate ctr
+
+    ctr -> serv: getAllDeliveries
+    deactivate ctr
+    activate serv
+
+    alt if ok
+
+    serv --> view: 200
+     
+    activate view
+    WM <-- view: OK
+    deactivate view
+   
+    else error
+    view <-- serv: 400/423
+    deactivate ctr
+    activate view
+
+    deactivate serv
+    WM <-- view: ERROR
+    deactivate view
+
+   end alt
+  deactivate WM
+
+@enduml

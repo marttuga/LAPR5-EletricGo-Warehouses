@@ -1,0 +1,521 @@
+{
+	"info": {
+		"_postman_id": "42b3cc24-4938-442b-ad3d-0c029e933fcc",
+		"name": "Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23548815"
+	},
+	"item": [
+		{
+			"name": "Verificar se existe uma encomenda",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test: 404, the delivery does not exist\", function() {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Deliveries/ById/1256",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Deliveries",
+						"ById",
+						"1256"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar uma encomenda",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201, the delivery has been created\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"dIdentifier\": {\n        \"dIdentifier\":\"1234\"\n        },\n    \"date\": 31102022,\n    \"mass\": 2,\n    \"timeLoad\":4,\n    \"timeUnload\":8\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Deliveries",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Deliveries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verificar que agora a encomenda já existe",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test is 200, the delivery exists\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/Deliveries/ById/1234",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Deliveries",
+						"ById",
+						"1234"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar a data da encomenda",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test: 200, the delivery date has been changed with success\" , function() {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"dIdentifier\": {\n        \"dIdentifier\":\"1234\"\n        },\n    \"date\": 21112022,\n    \"mass\": 2,\n    \"timeLoad\":4,\n    \"timeUnload\":8\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Deliveries/Update/1234",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Deliveries",
+						"Update",
+						"1234"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar mass da encomenda",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test: 200, the delivery mass has been changed with success \", function() {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"dIdentifier\": {\n        \"dIdentifier\":\"1234\"\n        },\n    \"date\": 31102022,\n    \"mass\": 4,\n    \"timeLoad\":4,\n    \"timeUnload\":8\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Deliveries/Update/1234",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Deliveries",
+						"Update",
+						"1234"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar o TimeLoad de uma encomenda",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test: 200,the delivery time load has been changed with success\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"dIdentifier\": {\n        \"dIdentifier\":\"1234\"\n        },\n    \"date\": 31102022,\n    \"mass\": 2,\n    \"timeLoad\":5,\n    \"timeUnload\":8\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Deliveries/Update/1234",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Deliveries",
+						"Update",
+						"1234"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar o TimeUnload de uma encomenda",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test: 200,the delivery time unload has been changed with success\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"dIdentifier\": {\n        \"dIdentifier\":\"1234\"\n        },\n    \"date\": 31102022,\n    \"mass\": 2,\n    \"timeLoad\":4,\n    \"timeUnload\":7\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Deliveries/Update/1234",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Deliveries",
+						"Update",
+						"1234"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirmar que a atualização da data foi realizada com sucesso",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test: 200,the delivery date has been changed\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/Deliveries/ById/1234",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Deliveries",
+						"ById",
+						"1234"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirmar que a atualização da 'mass' foi realizada com sucesso",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test: 200,the delivery time unload has been changed\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/Deliveries/ById/1234",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Deliveries",
+						"ById",
+						"1234"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirmar que a atualização do 'TimeLoad' foi realizada com sucesso",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test: 200,the delivery time load has been changed\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/Deliveries/ById/1234",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Deliveries",
+						"ById",
+						"1234"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirmar que a atualização do 'TimeUnload' foi realizada com sucesso",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test: 200,the delivery time unload has been changed\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/Deliveries/ById/1234",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Deliveries",
+						"ById",
+						"1234"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar as encomendas",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test is 200\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/Deliveries",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Deliveries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verificar ou não se existe uma encomenda pelo Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test: 404, the delivery does not exist\", function() {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/Deliveries/ById/1245",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Deliveries",
+						"ById",
+						"1245"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

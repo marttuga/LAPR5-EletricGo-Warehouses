@@ -1,0 +1,93 @@
+@startuml Sequence Diagram
+autonumber
+
+actor WAREHOUSEMANAGER as WMR
+
+activate WMR
+box "<<System>> EletricGO" #LightBlue
+'participant "<<System>> EletricGO" as E
+participant "SPA" as SPA
+participant "WM" as WM
+participant "Logistic" as LOG
+participant "Planning" as PLAN
+end box
+
+alt if you want to create the delivery
+    WMR -> SPA: Starts to create a Delivery
+    activate SPA
+    SPA --> WMR: Asks for data
+    deactivate SPA
+    WMR-> SPA: Introduce the requested data
+    activate SPA
+    SPA -> WM: POST
+    deactivate SPA
+    activate WM
+    alt if ok 
+
+        WM --> SPA: 201 
+        activate SPA
+        WMR <-- SPA: CREATED
+        deactivate SPA
+
+    else error 
+        SPA <-- WM: 400/423
+        deactivate WM
+        activate SPA
+        WMR <-- SPA: ERROR
+        deactivate SPA
+
+        end alt
+    else if you want to edit the delivery
+
+        WMR -> SPA: Starts to edit a Delivery
+        activate SPA
+        SPA --> WMR: Asks for data
+        deactivate SPA
+
+        WMR-> SPA: Introduce the requested data
+
+        activate SPA
+        SPA -> WM: POST
+        deactivate SPA
+        activate WM
+
+        alt if ok 
+
+            WM --> SPA: 200
+            activate SPA
+            WMR <-- SPA: OK
+            deactivate SPA
+        else error 
+            SPA <-- WM: 400/423
+            deactivate WM
+            activate SPA
+
+            WMR <-- SPA: ERROR
+            deactivate SPA
+            end alt
+
+        else if you want to list the deliveries
+            WMR -> SPA: asks to list the Deliveries
+            activate SPA
+            SPA -> WM: getDeliveries()
+            deactivate SPA
+            activate WM
+            alt if ok 
+
+                WM --> SPA: 200
+                activate SPA
+                WMR <-- SPA: OK and shows list of deliveries
+                deactivate SPA
+            else error 
+                SPA <-- WM: 400/423
+                deactivate WM
+                activate SPA
+
+                WMR <-- SPA: ERROR
+                deactivate SPA
+
+                end alt
+                end alt
+                deactivate WMR
+
+@enduml

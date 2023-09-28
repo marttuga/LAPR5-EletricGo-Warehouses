@@ -1,0 +1,69 @@
+@startuml Sequence Diagram
+autonumber
+
+actor WAREHOUSEMANAGER as WMR
+
+participant "<<System>> <<Context C4>> ELETRIC GO" as SYS
+
+alt if you want to create the delivery
+WMR -> SYS: Starts to create a Delivery
+activate SYS
+SYS --> WMR: Asks for data
+deactivate SYS
+WMR-> SYS: Introduce the requested data
+activate SYS
+
+alt if ok 
+
+
+WMR <-- SYS: OK
+
+else error 
+
+
+WMR <-- SYS: ERROR
+
+deactivate SYS
+
+
+
+end alt
+else if you want to edit the delivery
+
+WMR -> SYS: Starts to edit a Delivery
+activate SYS
+SYS --> WMR: Asks for data
+deactivate SYS
+
+WMR-> SYS: Introduce the requested data
+activate SYS
+alt if ok 
+WMR <-- SYS: OK
+
+else error 
+
+
+WMR <-- SYS: ERROR
+deactivate SYS
+end alt
+
+else if you want to list the deliveries
+WMR -> SYS: asks to list the Deliveries
+alt if ok 
+
+activate SYS
+
+
+WMR <-- SYS: OK and shows list of deliveries
+
+else error
+
+
+WMR <-- SYS: ERROR
+deactivate SYS
+
+
+end alt
+end alt
+
+@enduml

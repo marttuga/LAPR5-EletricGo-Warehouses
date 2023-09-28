@@ -1,0 +1,37 @@
+@startuml
+actor UIAdministrator
+actor UIWarehouseManagement
+actor UILogisticManagement 
+actor UIClient
+actor UIFleetManagement
+LogisticManagement-(0- "WM API" WarehouseManagement
+AA -(0- "API1" WarehouseManagement
+AA -(0- "API2" LogisticManagement
+UI -(0- "API3" AA
+Planning --0)-- "PLAN API" LogisticManagement
+Planning -(0- "WM API" WarehouseManagement
+
+
+
+component "«System» «Context C4» ELETRIC GO" {
+port UI.
+port SSOAPI
+component UI{
+}
+component WarehouseManagement {
+}
+component LogisticManagement{
+}
+rectangle AA {
+}
+component Planning{
+}
+}
+UI. -- UI
+UIWarehouseManagement 0-- UI.
+UILogisticManagement 0-- UI.
+UIAdministrator 0-- UI.
+UIClient 0-- UI.
+UIFleetManagement 0-- UI.
+
+@enduml

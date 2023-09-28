@@ -1,0 +1,63 @@
+@startuml Sequence Diagram
+autonumber
+
+actor FLEETMANAGER as LM
+
+activate LM
+box "<<System>> EletricGO" #LightBlue
+'participant "<<System>> EletricGO" as E
+participant "UI" as UI
+participant "Logistic" as LOGI
+participant "WM" as WM
+participant "Planning" as PLAN
+end box
+
+    
+            LM -> UI: asks to list the trucks
+            activate UI
+            UI -> LOGI: getTrucks()
+            deactivate UI
+            activate LOGI
+            alt if ok
+
+                LOGI --> UI: 200  
+                activate UI 
+                deactivate LOGI
+                LM <-- UI: OK and shows list of trucks
+deactivate UI
+            LM -> UI: changes truck active 
+            activate UI
+
+            alt disable truck
+            UI -> LOGI: changeTruckInactivate()
+            activate LOGI
+
+            LOGI --> UI: 200
+
+                LM <-- UI: OK and inactivates truck
+
+            else enables truck
+             UI -> LOGI: changeTruckActivate()
+
+
+            LOGI --> UI: 200
+
+                LM <-- UI: OK and Activates truck
+                deactivate UI
+            end alt 
+
+            else error
+                UI <-- LOGI: 400/423
+                deactivate LOGI
+                activate UI
+
+                LM <-- UI: ERROR
+                deactivate UI
+
+                end alt
+            
+
+
+                deactivate LM
+
+                @enduml

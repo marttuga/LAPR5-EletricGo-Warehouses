@@ -1,0 +1,43 @@
+@startuml Diagram
+
+top to bottom direction
+
+package "EletricGO MDL"{
+
+package Infrastructure{
+    package Persistence
+    
+    package Routes
+    
+}
+package InterfaceAdapters{
+    package Controllers 
+    
+    package Repositories
+    
+}
+
+package ApplicationServices/UseCaseServices {
+    package AppServices
+    
+}
+
+package Entities/Core/Domain {
+    package Aggregates 
+    
+    package ValueObjects 
+    
+    package Services 
+    
+}
+}
+
+Routes --> Controllers
+Controllers --> AppServices
+Persistence <-- Repositories
+AppServices <-- Repositories
+AppServices --> Aggregates
+AppServices --> ValueObjects
+AppServices --> Services
+
+@enduml

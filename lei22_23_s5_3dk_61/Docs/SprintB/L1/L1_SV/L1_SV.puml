@@ -1,0 +1,33 @@
+@startuml diagram
+left to right direction
+
+package SystemUsers {
+    actor "Warehouse Manager" as WM
+    actor "Fleet Manager" as FM
+    actor "Logistics Manager" as LM
+}
+
+package system {
+  usecase "Create Warehouse" as UC1C
+  usecase "Create Delivery" as UC2C
+  usecase "Create Truck" as UC3C
+  usecase "Create route between two warehouses" as UC3L
+  usecase "Plan route for a truck on a certain day" as UC3E
+  usecase "View the road network graphically in 3D" as UC4C
+  usecase "View graphically the existing warehouses, create or import the 3D models" as UC4L
+  usecase "Control the display. Add the pan, zoom and orbit controls" as UC4E
+
+}
+
+WM --> UC1C
+WM --> UC2C
+
+FM --> UC3C
+LM --> UC3L
+LM --> UC3E
+LM --> UC4C
+LM --> UC4L
+LM --> UC4E
+@enduml
+
+

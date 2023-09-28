@@ -1,0 +1,26 @@
+@startuml diagram
+top to bottom direction
+
+node localhost:5001 as LH {
+ component Browser <<Component>> {
+    component SPA <<Component>> {
+    }
+ }
+}
+node server1 as S1 {
+  component MDWM <<Component>> {
+  }
+  component Planning <<Component>> {
+  }
+}
+
+node server2 as S2 {
+  component HTTPServer <<Component>> {
+  }
+  package SPA {
+  }
+}
+
+Browser -- S1 
+Browser --- S2
+@enduml

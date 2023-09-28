@@ -1,0 +1,95 @@
+@startuml Sequence Diagram
+autonumber
+
+actor WAREHOUSEMANAGER as WMR
+
+activate WMR
+box "<<System>> EletricGO" #LightBlue
+'participant "<<System>> EletricGO" as E
+participant "SPA" as SPA
+participant "WM" as WM
+participant "Logistic" as LOG
+participant "Planning" as PLAN
+end box
+
+alt if warehouse doesn't exist
+WMR -> SPA: Starts to create a Warehouse
+activate SPA
+SPA --> WMR: Asks for data
+deactivate SPA
+WMR-> SPA: Introduce the requested data
+activate SPA
+SPA -> WM: POST
+deactivate SPA
+activate WM
+alt if ok 
+
+WM --> SPA: 201 
+activate SPA
+WMR <-- SPA: CREATED
+deactivate SPA
+else error 
+SPA <-- WM: 400/423
+deactivate WM
+activate SPA
+
+WMR <-- SPA: ERROR
+deactivate SPA
+
+
+end alt
+else if you want to edit the warehouse
+
+WMR -> SPA: Starts to edit a Warehouse
+activate SPA
+SPA --> WMR: Asks for data
+deactivate SPA
+
+WMR-> SPA: Introduce the requested data
+
+activate SPA
+SPA -> WM: POST
+deactivate SPA
+activate WM
+alt if ok 
+
+WM --> SPA: 200
+activate SPA
+WMR <-- SPA: OK
+deactivate SPA
+else error 
+SPA <-- WM: 400/423
+deactivate WM
+activate SPA
+
+WMR <-- SPA: ERROR
+deactivate SPA
+end alt
+
+else if you want to list the warehouse
+WMR -> SPA: asks to list the Warehouses
+activate SPA
+SPA -> WM: getWarehouses()
+deactivate SPA
+activate WM
+alt if ok 
+
+WM --> SPA: 200
+activate SPA
+WMR <-- SPA: OK and shows list of warehouses
+deactivate SPA
+else error 
+SPA <-- WM: 400/423
+deactivate WM
+activate SPA
+
+WMR <-- SPA: ERROR
+deactivate SPA
+
+end alt
+end alt
+
+
+deactivate WMR
+
+@enduml

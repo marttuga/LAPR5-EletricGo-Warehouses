@@ -1,0 +1,40 @@
+@startuml diagram
+left to right direction
+
+package SystemUsers {
+    actor "Warehouse Manager" as WM
+    actor "Fleet Manager" as FM
+    actor "Logistics Manager" as LM
+}
+package WarehouseManagement {
+  usecase "Create Warehouse" as UC1C
+  usecase "List Warehouse" as UC1L
+  usecase "Edit Warehouse" as UC1E
+  usecase "Create Delivery" as UC2C
+  usecase "List Delivery" as UC2L
+  usecase "Edit Delivery" as UC2E
+}
+
+package Logistics {
+  usecase "Create Truck" as UC3C
+  usecase "List Truck" as UC3L
+  usecase "Edit Truck" as UC3E
+  usecase "Create Route" as UC4C
+  usecase "List Route" as UC4L
+  usecase "Edit Route" as UC4E
+
+}
+
+WM --> UC1C
+WM --> UC1L
+WM --> UC1E
+WM --> UC2C
+WM --> UC2L
+WM --> UC2E
+FM --> UC3C
+FM --> UC3L
+FM --> UC3E
+LM --> UC4C
+LM --> UC4L
+LM --> UC4E
+@enduml

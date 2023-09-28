@@ -1,0 +1,10 @@
+Análise da US de filtrar e ordenar as entregas pelas suas caraterísticas
+
+Esta US tem o propósito de filtrar e ordenar os  principais atributos, como 
+a data e o armazém de destino.
+Tendo em conta que podemos filtrar alguns dos seus atributos e como nada é dito, assume-se que fica
+à escolha de quais queremos filtrar.
+
+Na ordenação existem alguns pontos a serem seguidos.
+- A data deve ser ordenada por ordem cronológica.
+- O armazem de destino deve ser ordenado de forma ascendente.

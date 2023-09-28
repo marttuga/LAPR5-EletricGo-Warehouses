@@ -1,0 +1,69 @@
+@startuml Sequence Diagram
+autonumber
+
+actor FLEETMANAGER as LM
+
+activate LM
+box "<<System>> EletricGO" #LightBlue
+'participant "<<System>> EletricGO" as E
+participant "UI" as UI
+participant "Logistic" as LOGI
+participant "WM" as WM
+participant "Planning" as PLAN
+end box
+
+alt if truck doesn't exist
+    LM -> UI: Starts to create a truck
+    activate UI
+    UI --> LM: Asks for data
+    deactivate UI
+    LM-> UI: Introduce the requested data
+    activate UI
+    UI -> LOGI: createTruck()
+    deactivate UI
+    activate LOGI
+    alt if ok
+
+        LOGI --> UI: 201
+        activate UI
+        LM <-- UI: CREATED
+        deactivate UI
+    else error
+        UI <-- LOGI: 400/423
+        deactivate LOGI
+        activate UI
+
+        LM <-- UI: ERROR
+        deactivate UI
+
+
+        end alt
+
+
+        else if you want to list the truck
+            LM -> UI: asks to list the trucks
+            activate UI
+            UI -> LOGI: getTrucks()
+            deactivate UI
+            activate LOGI
+            alt if ok
+
+                LOGI --> UI: 200
+                activate UI
+                LM <-- UI: OK and shows list of trucks
+                deactivate UI
+            else error
+                UI <-- LOGI: 400/423
+                deactivate LOGI
+                activate UI
+
+                LM <-- UI: ERROR
+                deactivate UI
+
+                end alt
+                end alt
+
+
+                deactivate LM
+
+                @enduml

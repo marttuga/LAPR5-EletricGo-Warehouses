@@ -1,0 +1,8 @@
+Análise da US de animar interactivamente o movimento do camião, permitindo desta forma a visualização
+do plano de entregas.
+
+Nesta US é pedido que o camião, no frontend, possa ser animado interativamente pleo utilizador. Para isso,
+vão ser usadas 4 teclas, que assinalam o movimento para cima, para baico, para o lado esquerdo e para o 
+lado direito. 
+Assim vai ser possivel que o camião use apenas a rede viária e que seja limitado a circular aí, até fazer
+o caminho da entrega entre armazéns.

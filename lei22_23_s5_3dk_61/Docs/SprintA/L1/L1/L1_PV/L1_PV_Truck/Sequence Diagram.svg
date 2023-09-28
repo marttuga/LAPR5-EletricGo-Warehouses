@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="763px" preserveAspectRatio="none" style="width:500px;height:763px;background:#FFFFFF;" version="1.1" viewBox="0 0 500 763" width="500px" zoomAndPan="magnify"><defs/><g><rect fill="#FFFFFF" height="29.3105" style="stroke:#181818;stroke-width:1.0;" width="10" x="310.5" y="137.1094"/><rect fill="#FFFFFF" height="97.8867" style="stroke:#181818;stroke-width:1.0;" width="10" x="310.5" y="195.7305"/><rect fill="#FFFFFF" height="29.3105" style="stroke:#181818;stroke-width:1.0;" width="10" x="310.5" y="344.8828"/><rect fill="#FFFFFF" height="97.8867" style="stroke:#181818;stroke-width:1.0;" width="10" x="310.5" y="403.5039"/><rect fill="#FFFFFF" height="97.8867" style="stroke:#181818;stroke-width:1.0;" width="10" x="310.5" y="552.6563"/><rect fill="none" height="567.0547" style="stroke:#000000;stroke-width:1.5;" width="483.5" x="10" y="98.4883"/><rect fill="none" height="90.8867" style="stroke:#000000;stroke-width:1.5;" width="463.5" x="20" y="210.7305"/><rect fill="none" height="90.8867" style="stroke:#000000;stroke-width:1.5;" width="463.5" x="20" y="418.5039"/><rect fill="none" height="90.8867" style="stroke:#000000;stroke-width:1.5;" width="463.5" x="20" y="567.6563"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="87" x2="87" y1="81.4883" y2="682.543"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="315.5" x2="315.5" y1="81.4883" y2="682.543"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109" x="30" y="78.5352">FLEETMANAGER</text><ellipse cx="87.5" cy="13.5" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M87.5,21.5 L87.5,48.5 M74.5,29.5 L100.5,29.5 M87.5,48.5 L74.5,63.5 M87.5,48.5 L100.5,63.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109" x="30" y="695.0781">FLEETMANAGER</text><ellipse cx="87.5" cy="706.5313" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M87.5,714.5313 L87.5,741.5313 M74.5,722.5313 L100.5,722.5313 M87.5,741.5313 L74.5,756.5313 M87.5,741.5313 L100.5,756.5313 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><rect fill="#E2E2F0" height="30.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="316" x="157.5" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="302" x="164.5" y="70.5352">&lt;&lt;System&gt;&gt; &lt;&lt;Context C4&gt;&gt; ELETRIC GO</text><rect fill="#E2E2F0" height="30.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="316" x="157.5" y="681.543"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="302" x="164.5" y="702.0781">&lt;&lt;System&gt;&gt; &lt;&lt;Context C4&gt;&gt; ELETRIC GO</text><rect fill="#FFFFFF" height="29.3105" style="stroke:#181818;stroke-width:1.0;" width="10" x="310.5" y="137.1094"/><rect fill="#FFFFFF" height="97.8867" style="stroke:#181818;stroke-width:1.0;" width="10" x="310.5" y="195.7305"/><rect fill="#FFFFFF" height="29.3105" style="stroke:#181818;stroke-width:1.0;" width="10" x="310.5" y="344.8828"/><rect fill="#FFFFFF" height="97.8867" style="stroke:#181818;stroke-width:1.0;" width="10" x="310.5" y="403.5039"/><rect fill="#FFFFFF" height="97.8867" style="stroke:#181818;stroke-width:1.0;" width="10" x="310.5" y="552.6563"/><path d="M10,98.4883 L72,98.4883 L72,105.7988 L62,115.7988 L10,115.7988 L10,98.4883 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;"/><rect fill="none" height="567.0547" style="stroke:#000000;stroke-width:1.5;" width="483.5" x="10" y="98.4883"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="17" x="25" y="112.0566">alt</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="128" x="87" y="111.123">[if Truck doesn't exist]</text><polygon fill="#181818" points="298.5,133.1094,308.5,137.1094,298.5,141.1094,302.5,137.1094" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="87.5" x2="304.5" y1="137.1094" y2="137.1094"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="94.5" y="132.3672">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="146" x="107.5" y="132.3672">Starts to create a Truck</text><polygon fill="#181818" points="98.5,162.4199,88.5,166.4199,98.5,170.4199,94.5,166.4199" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="92.5" x2="314.5" y1="166.4199" y2="166.4199"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="104.5" y="161.6777">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="84" x="117.5" y="161.6777">Asks for data</text><polygon fill="#181818" points="298.5,191.7305,308.5,195.7305,298.5,199.7305,302.5,195.7305" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="87.5" x2="304.5" y1="195.7305" y2="195.7305"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="94.5" y="190.9883">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="181" x="107.5" y="190.9883">Introduce the requested data</text><path d="M20,210.7305 L82,210.7305 L82,218.041 L72,228.041 L20,228.041 L20,210.7305 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;"/><rect fill="none" height="90.8867" style="stroke:#000000;stroke-width:1.5;" width="463.5" x="20" y="210.7305"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="17" x="35" y="224.2988">alt</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="35" x="97" y="223.3652">[if ok]</text><polygon fill="#181818" points="98.5,245.3516,88.5,249.3516,98.5,253.3516,94.5,249.3516" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="92.5" x2="309.5" y1="249.3516" y2="249.3516"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="104.5" y="244.6094">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="18" x="117.5" y="244.6094">OK</text><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="20" x2="483.5" y1="258.3516" y2="258.3516"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="36" x="25" y="268.9863">[error]</text><polygon fill="#181818" points="98.5,289.6172,88.5,293.6172,98.5,297.6172,94.5,293.6172" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="92.5" x2="314.5" y1="293.6172" y2="293.6172"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="104.5" y="288.875">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="117.5" y="288.875">ERROR</text><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="10" x2="493.5" y1="309.6172" y2="309.6172"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="169" x="15" y="320.252">[if you want to edit the Truck]</text><polygon fill="#181818" points="298.5,340.8828,308.5,344.8828,298.5,348.8828,302.5,344.8828" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="87.5" x2="304.5" y1="344.8828" y2="344.8828"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="94.5" y="340.1406">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="132" x="107.5" y="340.1406">Starts to edit a Truck</text><polygon fill="#181818" points="98.5,370.1934,88.5,374.1934,98.5,378.1934,94.5,374.1934" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="92.5" x2="314.5" y1="374.1934" y2="374.1934"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="104.5" y="369.4512">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="84" x="117.5" y="369.4512">Asks for data</text><polygon fill="#181818" points="298.5,399.5039,308.5,403.5039,298.5,407.5039,302.5,403.5039" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="87.5" x2="304.5" y1="403.5039" y2="403.5039"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="94.5" y="398.7617">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="181" x="107.5" y="398.7617">Introduce the requested data</text><path d="M20,418.5039 L82,418.5039 L82,425.8145 L72,435.8145 L20,435.8145 L20,418.5039 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;"/><rect fill="none" height="90.8867" style="stroke:#000000;stroke-width:1.5;" width="463.5" x="20" y="418.5039"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="17" x="35" y="432.0723">alt</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="35" x="97" y="431.1387">[if ok]</text><polygon fill="#181818" points="98.5,453.125,88.5,457.125,98.5,461.125,94.5,457.125" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="92.5" x2="309.5" y1="457.125" y2="457.125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="104.5" y="452.3828">9</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="18" x="117.5" y="452.3828">OK</text><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="20" x2="483.5" y1="466.125" y2="466.125"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="36" x="25" y="476.7598">[error]</text><polygon fill="#181818" points="98.5,497.3906,88.5,501.3906,98.5,505.3906,94.5,501.3906" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="92.5" x2="314.5" y1="501.3906" y2="501.3906"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="104.5" y="496.6484">10</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="126.5" y="496.6484">ERROR</text><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="10" x2="493.5" y1="517.3906" y2="517.3906"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="166" x="15" y="528.0254">[if you want to list the Truck]</text><polygon fill="#181818" points="298.5,548.6563,308.5,552.6563,298.5,556.6563,302.5,552.6563" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="87.5" x2="304.5" y1="552.6563" y2="552.6563"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="94.5" y="547.9141">11</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="141" x="116.5" y="547.9141">asks to list the Trucks</text><path d="M20,567.6563 L82,567.6563 L82,574.9668 L72,584.9668 L20,584.9668 L20,567.6563 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;"/><rect fill="none" height="90.8867" style="stroke:#000000;stroke-width:1.5;" width="463.5" x="20" y="567.6563"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="17" x="35" y="581.2246">alt</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="35" x="97" y="580.291">[if ok]</text><polygon fill="#181818" points="98.5,602.2773,88.5,606.2773,98.5,610.2773,94.5,606.2773" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="92.5" x2="309.5" y1="606.2773" y2="606.2773"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="104.5" y="601.5352">12</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="177" x="126.5" y="601.5352">OK and shows list of Trucks</text><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="20" x2="483.5" y1="615.2773" y2="615.2773"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="36" x="25" y="625.9121">[error]</text><polygon fill="#181818" points="98.5,646.543,88.5,650.543,98.5,654.543,94.5,650.543" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="92.5" x2="314.5" y1="650.543" y2="650.543"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="104.5" y="645.8008">13</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41" x="126.5" y="645.8008">ERROR</text><!--MD5=[a9b53ed27cdc58e86ad3c00c67fdbc3f]
+@startuml Sequence Diagram
+autonumber
+
+actor FLEETMANAGER as LM
+
+participant "<<System>> <<Context C4>> ELETRIC GO" as SYS
+
+alt if Truck doesn't exist
+LM -> SYS: Starts to create a Truck
+activate SYS 
+SYS - -> LM: Asks for data
+deactivate SYS
+LM-> SYS : Introduce the requested data
+activate SYS  
+
+alt if ok 
+
+
+LM <- - SYS: OK
+
+else error 
+ 
+
+LM <- - SYS: ERROR
+
+deactivate SYS
+
+
+
+end alt
+else if you want to edit the Truck
+
+LM -> SYS: Starts to edit a Truck
+activate SYS
+SYS - -> LM: Asks for data
+deactivate SYS
+
+LM-> SYS : Introduce the requested data
+activate SYS
+alt if ok 
+LM <- - SYS: OK
+
+else error 
+
+  
+
+LM <- - SYS: ERROR
+deactivate SYS
+end alt
+
+else if you want to list the Truck
+LM -> SYS: asks to list the Trucks
+alt if ok 
+
+activate SYS
+
+ 
+LM <- - SYS: OK and shows list of Trucks
+
+else error 
+
+
+LM <- - SYS: ERROR
+deactivate SYS
+
+
+end alt
+end alt
+
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 18:01:30 WEST 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: pt
+Country: PT
+--></g></svg>

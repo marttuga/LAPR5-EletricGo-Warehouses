@@ -1,0 +1,89 @@
+@startuml Sequence Diagram
+autonumber
+
+actor Router as LM
+
+activate LM
+box "<<System>> EletricGO" #LightBlue
+'participant "<<System>> EletricGO" as E
+participant "Views" as Views
+participant "CreateRouteTS" as ctr
+participant "RouteService" as serv
+end box
+
+
+    LM -> Views: Starts to create a route
+    activate Views
+    Views --> LM: Asks for data
+    deactivate Views
+    LM-> Views: Introduce the requested data
+    activate Views
+    Views -> ctr: createRoute()
+    
+    deactivate Views
+    activate ctr
+    ctr -> serv: createRoute
+     deactivate ctr
+
+    activate serv
+   
+   
+
+    alt if ok
+  
+
+    serv --> Views: 201
+     
+    activate Views
+    LM <-- Views: CREATED
+    deactivate Views
+   
+    else error
+    Views <-- serv: 400/423
+    deactivate ctr
+    activate Views
+
+    deactivate serv
+    LM <-- Views: ERROR
+    deactivate Views
+
+end alt
+
+
+            LM -> Views: asks to list the routes
+            activate Views
+            Views -> ctr: getRoutes()
+            deactivate Views
+            activate ctr
+
+    ctr -> serv: getRoutes
+    deactivate ctr
+    activate serv
+   
+ 
+
+    alt if ok
+    
+
+    serv --> Views: 200
+     
+    activate Views
+    LM <-- Views: OK
+    deactivate Views
+   
+    else error
+    Views <-- serv: 400/423
+    deactivate ctr
+    activate Views
+
+    deactivate serv
+    LM <-- Views: ERROR
+    deactivate Views
+
+end alt
+               
+
+
+deactivate LM
+
+@enduml

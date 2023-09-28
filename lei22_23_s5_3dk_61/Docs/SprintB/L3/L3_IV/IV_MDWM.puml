@@ -1,0 +1,40 @@
+@startuml
+top to bottom direction
+
+package "EletricGO MDWM"{
+
+package Infrastructure{
+    package Persistence
+
+    package Repositories
+
+    
+}
+package InterfaceAdapters{
+    package Controllers  
+    
+    
+}
+
+package ApplicationServices/UseCaseServices {
+    package AppServices
+    
+}
+
+package Domain {
+     package Aggregates 
+    
+    package ValueObjects 
+    
+    package Services 
+    
+}
+}
+
+Controllers ..> Services
+Persistence <.. Repositories
+Services ..> Repositories
+AppServices ..> Aggregates
+AppServices ..> ValueObjects
+AppServices ..> Services
+@enduml

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="611px" preserveAspectRatio="none" style="width:625px;height:611px;background:#FFFFFF;" version="1.1" viewBox="0 0 625 611" width="625px" zoomAndPan="magnify"><defs/><g><!--MD5=[67bb177c019bda4ec2dd1fef360eabe4]
+cluster LH--><g id="cluster_LH"><polygon fill="none" points="175,16,185,6,436,6,436,236,426,246,175,246,175,16" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="426" x2="436" y1="16" y2="6"/><line style="stroke:#181818;stroke-width:1.0;" x1="175" x2="426" y1="16" y2="16"/><line style="stroke:#181818;stroke-width:1.0;" x1="426" x2="426" y1="16" y2="246"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="100" x="251.5" y="33.5332">localhost:3000</text></g><!--MD5=[8699c0c8e953ee53654a072cc875bfb4]
+cluster Browser--><g id="cluster_Browser"><rect fill="none" height="151" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;" width="197" x="207" y="63"/><rect fill="none" height="10" style="stroke:#181818;stroke-width:1.0;" width="15" x="384" y="68"/><rect fill="none" height="2" style="stroke:#181818;stroke-width:1.0;" width="4" x="382" y="70"/><rect fill="none" height="2" style="stroke:#181818;stroke-width:1.0;" width="4" x="382" y="74"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="89" x="261" y="90.5332">«Component»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="59" x="276" y="108.1426">Browser</text></g><!--MD5=[0ac70d5a357257da33ce88abad68f4a4]
+cluster S1--><g id="cluster_S1"><polygon fill="none" points="16,288,26,278,377,278,377,406,367,416,16,416,16,288" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="367" x2="377" y1="288" y2="278"/><line style="stroke:#181818;stroke-width:1.0;" x1="16" x2="367" y1="288" y2="288"/><line style="stroke:#181818;stroke-width:1.0;" x1="367" x2="367" y1="288" y2="416"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="55" x="165" y="305.5332">server1</text></g><!--MD5=[dc4eb2012487d12714526fe7f88b694b]
+cluster S2--><g id="cluster_S2"><polygon fill="none" points="411,466,421,456,608,456,608,584,598,594,411,594,411,466" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="598" x2="608" y1="466" y2="456"/><line style="stroke:#181818;stroke-width:1.0;" x1="411" x2="598" y1="466" y2="466"/><line style="stroke:#181818;stroke-width:1.0;" x1="598" x2="598" y1="466" y2="594"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="55" x="478" y="483.5332">server2</text></g><!--MD5=[c07081854fd6c8104da7ffce51ef9e78]
+entity SPA--><g id="elem_SPA"><rect fill="#F1F1F1" height="65.2188" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="129" x="250.5" y="125"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="359.5" y="130"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="357.5" y="132"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="357.5" y="136"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="89" x="265.5" y="159.5332">«Component»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="27" x="296.5" y="177.1426">SPA</text></g><!--MD5=[76eadf8b60491b080500bbb6761343de]
+entity MDL--><g id="elem_MDL"><rect fill="#F1F1F1" height="65.2188" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="129" x="223.5" y="327"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="332.5" y="332"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="330.5" y="334"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="330.5" y="338"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="89" x="238.5" y="361.5332">«Component»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="268.5" y="379.1426">MDL</text></g><!--MD5=[4243c1601d305ab699cf48f8763533aa]
+entity Planning--><g id="elem_Planning"><rect fill="#F1F1F1" height="65.2188" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="129" x="59.5" y="327"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="168.5" y="332"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="166.5" y="334"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="166.5" y="338"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="89" x="74.5" y="361.5332">«Component»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="55" x="91.5" y="379.1426">Planning</text></g><!--MD5=[3bed7ba6c61491deed8b518d0a5cbb1d]
+entity HTTPServer--><g id="elem_HTTPServer"><rect fill="#F1F1F1" height="65.2188" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="129" x="454.5" y="505"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="563.5" y="510"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="561.5" y="512"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="561.5" y="516"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="89" x="469.5" y="539.5332">«Component»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="475" y="557.1426">HTTPServer</text></g><!--MD5=[9a4c59f269c4c1c6ee9c9f5f27701cad]
+link Browser to S1--><g id="link_Browser_S1"><path d="M206.7144,160.8237 C206.586,160.8619 206.4562,160.9005 206.3252,160.9396 C206.063,161.0178 205.7956,161.098 205.5229,161.18 C204.4321,161.5082 203.2576,161.8673 202.0048,162.2574 C199.4993,163.0376 196.6809,163.9423 193.5939,164.9744 C181.2459,169.1025 164.6006,175.2675 146.4937,183.65 C110.28,200.415 68.22,226.05 43,262 C39.9112,266.4038 37.295,271.1848 35.0817,276.1838 C34.9434,276.4962 34.8067,276.8095 34.6715,277.1236 C34.6039,277.2806 34.5366,277.4379 34.4698,277.5953 " fill="none" id="Browser-S1" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[71de13178a6e14c9739f9c58e49ad1e0]
+link Browser to S2--><g id="link_Browser_S2"><path d="M214.1744,214.4906 C214.2036,214.6541 214.2331,214.8176 214.2631,214.9811 C214.3229,215.308 214.3843,215.6348 214.4472,215.9615 C214.6988,217.2681 214.975,218.5719 215.2775,219.87 C215.8826,222.4662 216.593,225.0393 217.4228,227.5645 C220.7419,237.6656 225.97,247.0025 234,254 C256.66,273.74 346.5,242.07 369,262 C414.69,302.47 427.5175,369.6 428.7625,427.3425 C428.9181,434.5603 428.8928,441.6314 428.728,448.4855 C428.6868,450.199 428.6369,451.8989 428.5789,453.5842 C428.5645,454.0055 428.5495,454.4259 428.534,454.8454 " fill="none" id="Browser-S2" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[f7ec8839f29ad2308a3dd5fa8d50461e]
+@startuml diagram
+top to bottom direction
+
+node localhost:3000 as LH {
+ component Browser <<Component>> {
+    component SPA <<Component>> {
+    }
+ }
+}
+node server1 as S1 {
+  component MDL <<Component>> {
+  }
+  component Planning <<Component>> {
+  }
+}
+
+node server2 as S2 {
+  component HTTPServer <<Component>> {
+  }
+  package SPA {
+  }
+}
+
+Browser - - S1 
+Browser - - - S2
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 18:01:30 BST 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

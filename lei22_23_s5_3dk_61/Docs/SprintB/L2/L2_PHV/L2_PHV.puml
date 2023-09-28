@@ -1,0 +1,43 @@
+@startuml diagram
+
+
+node lei22-23-s5-3dk-61-angular-65-owu9s9oif-ruipdias.vercel.app/views/login as LH {
+ 
+  component UI <<Component>> {
+  }
+ 
+}
+node lapr5-nodejs.herokuapp.com as SMDL {
+  component MDL <<Component>> {
+  }
+}
+database "MongoDB" {
+  node MongoDB as MDB {
+    
+  }
+}
+
+note bottom of MDB
+  Port 10960
+end note
+
+node lapr5-dotnet.herokuapp.com as SMDWM {
+  component MDWM <<Component>> {
+  }
+}
+
+database "MySql" {
+  node MySQL as MSQL {
+
+  }
+}
+
+note bottom of MSQL
+ Port 10278
+end note
+
+LH ---- SMDL
+LH ---- SMDWM
+SMDL --- MDB
+SMDWM --- MSQL
+@enduml 

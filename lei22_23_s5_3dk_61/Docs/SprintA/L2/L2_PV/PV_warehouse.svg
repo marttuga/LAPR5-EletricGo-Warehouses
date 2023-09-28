@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1065px" preserveAspectRatio="none" style="width:682px;height:1065px;background:#FFFFFF;" version="1.1" viewBox="0 0 682 1065" width="682px" zoomAndPan="magnify"><defs/><g><rect fill="#ADD8E6" height="1053.5391" style="stroke:#181818;stroke-width:0.5;" width="344.5" x="331.5" y="6"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="142" x="432.75" y="19.4951">&lt;&lt;System&gt;&gt; EletricGO</text><rect fill="#FFFFFF" height="876.3203" style="stroke:#181818;stroke-width:1.0;" width="10" x="106" y="92.6094"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="351" y="140.3125"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="351" y="201.0156"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="351" y="287.0703"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="351" y="363.6094"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="351" y="447.1484"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="351" y="507.8516"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="351" y="593.9063"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="351" y="670.4453"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="351" y="753.9844"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="351" y="840.0391"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="351" y="916.5781"/><rect fill="#FFFFFF" height="132.2422" style="stroke:#181818;stroke-width:1.0;" width="10" x="497" y="231.3672"/><rect fill="#FFFFFF" height="132.2422" style="stroke:#181818;stroke-width:1.0;" width="10" x="497" y="538.2031"/><rect fill="#FFFFFF" height="132.2422" style="stroke:#181818;stroke-width:1.0;" width="10" x="497" y="784.3359"/><rect fill="none" height="862.3203" style="stroke:#000000;stroke-width:1.5;" width="531" x="10" y="99.6094"/><rect fill="none" height="155.5938" style="stroke:#000000;stroke-width:1.5;" width="511" x="20" y="246.3672"/><rect fill="none" height="155.5938" style="stroke:#000000;stroke-width:1.5;" width="511" x="20" y="553.2031"/><rect fill="none" height="155.5938" style="stroke:#000000;stroke-width:1.5;" width="511" x="20" y="799.3359"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="111" x2="111" y1="82.6094" y2="978.9297"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="355.5" x2="355.5" y1="82.6094" y2="978.9297"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="502" x2="502" y1="82.6094" y2="978.9297"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="562" x2="562" y1="82.6094" y2="978.9297"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="637" x2="637" y1="82.6094" y2="978.9297"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="156" x="30" y="79.5332">WAREHOUSEMANAGER</text><ellipse cx="111" cy="13.5" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M111,21.5 L111,48.5 M98,29.5 L124,29.5 M111,48.5 L98,63.5 M111,48.5 L124,63.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="156" x="30" y="992.4629">WAREHOUSEMANAGER</text><ellipse cx="111" cy="1004.0391" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M111,1012.0391 L111,1039.0391 M98,1020.0391 L124,1020.0391 M111,1039.0391 L98,1054.0391 M111,1039.0391 L124,1054.0391 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="41" x="335.5" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="27" x="342.5" y="71.5332">SPA</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="41" x="335.5" y="977.9297"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="27" x="342.5" y="999.4629">SPA</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="38" x="483" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="24" x="490" y="71.5332">WM</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="38" x="483" y="977.9297"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="24" x="490" y="999.4629">WM</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="62" x="531" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="538" y="71.5332">Logistic</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="62" x="531" y="977.9297"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="538" y="999.4629">Logistic</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="69" x="603" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="55" x="610" y="71.5332">Planning</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="69" x="603" y="977.9297"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="55" x="610" y="999.4629">Planning</text><rect fill="#FFFFFF" height="876.3203" style="stroke:#181818;stroke-width:1.0;" width="10" x="106" y="92.6094"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="351" y="140.3125"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="351" y="201.0156"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="351" y="287.0703"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="351" y="363.6094"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="351" y="447.1484"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="351" y="507.8516"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="351" y="593.9063"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="351" y="670.4453"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="351" y="753.9844"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="351" y="840.0391"/><rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="351" y="916.5781"/><rect fill="#FFFFFF" height="132.2422" style="stroke:#181818;stroke-width:1.0;" width="10" x="497" y="231.3672"/><rect fill="#FFFFFF" height="132.2422" style="stroke:#181818;stroke-width:1.0;" width="10" x="497" y="538.2031"/><rect fill="#FFFFFF" height="132.2422" style="stroke:#181818;stroke-width:1.0;" width="10" x="497" y="784.3359"/><path d="M10,99.6094 L71,99.6094 L71,107.9609 L61,117.9609 L10,117.9609 L10,99.6094 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;"/><rect fill="none" height="862.3203" style="stroke:#000000;stroke-width:1.5;" width="531" x="10" y="99.6094"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="16" x="25" y="114.1045">alt</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="156" x="86" y="113.0283">[if warehouse doesn't exist]</text><polygon fill="#181818" points="339,136.3125,349,140.3125,339,144.3125,343,140.3125" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="116" x2="345" y1="140.3125" y2="140.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="123" y="135.4561">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="171" x="134" y="135.4561">Starts to create a Warehouse</text><polygon fill="#181818" points="127,166.6641,117,170.6641,127,174.6641,123,170.6641" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="121" x2="355" y1="170.6641" y2="170.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="133" y="165.8076">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="77" x="144" y="165.8076">Asks for data</text><polygon fill="#181818" points="339,197.0156,349,201.0156,339,205.0156,343,201.0156" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="116" x2="345" y1="201.0156" y2="201.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="123" y="196.1592">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="165" x="134" y="196.1592">Introduce the requested data</text><polygon fill="#181818" points="485,227.3672,495,231.3672,485,235.3672,489,231.3672" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="356" x2="491" y1="231.3672" y2="231.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="363" y="226.5107">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="35" x="374" y="226.5107">POST</text><path d="M20,246.3672 L81,246.3672 L81,254.7188 L71,264.7188 L20,264.7188 L20,246.3672 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;"/><rect fill="none" height="155.5938" style="stroke:#000000;stroke-width:1.5;" width="511" x="20" y="246.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="16" x="35" y="260.8623">alt</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="32" x="96" y="259.7861">[if ok]</text><polygon fill="#181818" points="372,283.0703,362,287.0703,372,291.0703,368,287.0703" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="366" x2="496" y1="287.0703" y2="287.0703"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="378" y="282.2139">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="21" x="389" y="282.2139">201</text><polygon fill="#181818" points="127,313.4219,117,317.4219,127,321.4219,123,317.4219" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="121" x2="355" y1="317.4219" y2="317.4219"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="133" y="312.5654">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61" x="144" y="312.5654">CREATED</text><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="20" x2="531" y1="326.4219" y2="326.4219"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="37" x="25" y="337.8408">[error]</text><polygon fill="#181818" points="372,359.6094,362,363.6094,372,367.6094,368,363.6094" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="366" x2="501" y1="363.6094" y2="363.6094"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="378" y="358.7529">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="46" x="389" y="358.7529">400/423</text><polygon fill="#181818" points="127,389.9609,117,393.9609,127,397.9609,123,393.9609" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="121" x2="355" y1="393.9609" y2="393.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="133" y="389.1045">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="46" x="144" y="389.1045">ERROR</text><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="10" x2="541" y1="409.9609" y2="409.9609"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="193" x="15" y="421.3799">[if you want to edit the warehouse]</text><polygon fill="#181818" points="339,443.1484,349,447.1484,339,451.1484,343,447.1484" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="116" x2="345" y1="447.1484" y2="447.1484"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="123" y="442.292">9</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="156" x="134" y="442.292">Starts to edit a Warehouse</text><polygon fill="#181818" points="127,473.5,117,477.5,127,481.5,123,477.5" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="121" x2="355" y1="477.5" y2="477.5"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="133" y="472.6436">10</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="77" x="151" y="472.6436">Asks for data</text><polygon fill="#181818" points="339,503.8516,349,507.8516,339,511.8516,343,507.8516" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="116" x2="345" y1="507.8516" y2="507.8516"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="123" y="502.9951">11</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="165" x="141" y="502.9951">Introduce the requested data</text><polygon fill="#181818" points="485,534.2031,495,538.2031,485,542.2031,489,538.2031" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="356" x2="491" y1="538.2031" y2="538.2031"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="363" y="533.3467">12</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="35" x="381" y="533.3467">POST</text><path d="M20,553.2031 L81,553.2031 L81,561.5547 L71,571.5547 L20,571.5547 L20,553.2031 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;"/><rect fill="none" height="155.5938" style="stroke:#000000;stroke-width:1.5;" width="511" x="20" y="553.2031"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="16" x="35" y="567.6982">alt</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="32" x="96" y="566.6221">[if ok]</text><polygon fill="#181818" points="372,589.9063,362,593.9063,372,597.9063,368,593.9063" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="366" x2="496" y1="593.9063" y2="593.9063"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="378" y="589.0498">13</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="21" x="396" y="589.0498">200</text><polygon fill="#181818" points="127,620.2578,117,624.2578,127,628.2578,123,624.2578" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="121" x2="355" y1="624.2578" y2="624.2578"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="133" y="619.4014">14</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="19" x="151" y="619.4014">OK</text><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="20" x2="531" y1="633.2578" y2="633.2578"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="37" x="25" y="644.6768">[error]</text><polygon fill="#181818" points="372,666.4453,362,670.4453,372,674.4453,368,670.4453" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="366" x2="501" y1="670.4453" y2="670.4453"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="378" y="665.5889">15</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="46" x="396" y="665.5889">400/423</text><polygon fill="#181818" points="127,696.7969,117,700.7969,127,704.7969,123,700.7969" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="121" x2="355" y1="700.7969" y2="700.7969"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="133" y="695.9404">16</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="46" x="151" y="695.9404">ERROR</text><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="10" x2="541" y1="716.7969" y2="716.7969"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="189" x="15" y="728.2158">[if you want to list the warehouse]</text><polygon fill="#181818" points="339,749.9844,349,753.9844,339,757.9844,343,753.9844" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="116" x2="345" y1="753.9844" y2="753.9844"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="123" y="749.1279">17</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="163" x="141" y="749.1279">asks to list the Warehouses</text><polygon fill="#181818" points="485,780.3359,495,784.3359,485,788.3359,489,784.3359" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="356" x2="491" y1="784.3359" y2="784.3359"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="363" y="779.4795">18</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="99" x="381" y="779.4795">getWarehouses()</text><path d="M20,799.3359 L81,799.3359 L81,807.6875 L71,817.6875 L20,817.6875 L20,799.3359 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;"/><rect fill="none" height="155.5938" style="stroke:#000000;stroke-width:1.5;" width="511" x="20" y="799.3359"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="16" x="35" y="813.8311">alt</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="32" x="96" y="812.7549">[if ok]</text><polygon fill="#181818" points="372,836.0391,362,840.0391,372,844.0391,368,840.0391" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="366" x2="496" y1="840.0391" y2="840.0391"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="378" y="835.1826">19</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="21" x="396" y="835.1826">200</text><polygon fill="#181818" points="127,866.3906,117,870.3906,127,874.3906,123,870.3906" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="121" x2="355" y1="870.3906" y2="870.3906"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="133" y="865.5342">20</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="193" x="151" y="865.5342">OK and shows list of warehouses</text><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="20" x2="531" y1="879.3906" y2="879.3906"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="37" x="25" y="890.8096">[error]</text><polygon fill="#181818" points="372,912.5781,362,916.5781,372,920.5781,368,916.5781" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="366" x2="501" y1="916.5781" y2="916.5781"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="378" y="911.7217">21</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="46" x="396" y="911.7217">400/423</text><polygon fill="#181818" points="127,942.9297,117,946.9297,127,950.9297,123,946.9297" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="121" x2="355" y1="946.9297" y2="946.9297"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="133" y="942.0732">22</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="46" x="151" y="942.0732">ERROR</text><!--MD5=[1daf04f2c6e25375c3accc5f1e5f031e]
+@startuml Sequence Diagram
+autonumber
+
+actor WAREHOUSEMANAGER as WMR
+
+activate WMR
+box "<<System>> EletricGO" #LightBlue
+'participant "<<System>> EletricGO" as E
+participant "SPA" as SPA
+participant "WM" as WM
+participant "Logistic" as LOG
+participant "Planning" as PLAN
+end box
+
+alt if warehouse doesn't exist
+WMR -> SPA: Starts to create a Warehouse
+activate SPA
+SPA - -> WMR: Asks for data
+deactivate SPA
+WMR-> SPA: Introduce the requested data
+activate SPA
+SPA -> WM: POST
+deactivate SPA
+activate WM
+alt if ok 
+
+WM - -> SPA: 201 
+activate SPA
+WMR <- - SPA: CREATED
+deactivate SPA
+else error 
+SPA <- - WM: 400/423
+deactivate WM
+activate SPA
+
+WMR <- - SPA: ERROR
+deactivate SPA
+
+
+end alt
+else if you want to edit the warehouse
+
+WMR -> SPA: Starts to edit a Warehouse
+activate SPA
+SPA - -> WMR: Asks for data
+deactivate SPA
+
+WMR-> SPA: Introduce the requested data
+
+activate SPA
+SPA -> WM: POST
+deactivate SPA
+activate WM
+alt if ok 
+
+WM - -> SPA: 200
+activate SPA
+WMR <- - SPA: OK
+deactivate SPA
+else error 
+SPA <- - WM: 400/423
+deactivate WM
+activate SPA
+
+WMR <- - SPA: ERROR
+deactivate SPA
+end alt
+
+else if you want to list the warehouse
+WMR -> SPA: asks to list the Warehouses
+activate SPA
+SPA -> WM: getWarehouses()
+deactivate SPA
+activate WM
+alt if ok 
+
+WM - -> SPA: 200
+activate SPA
+WMR <- - SPA: OK and shows list of warehouses
+deactivate SPA
+else error 
+SPA <- - WM: 400/423
+deactivate WM
+activate SPA
+
+WMR <- - SPA: ERROR
+deactivate SPA
+
+end alt
+end alt
+
+
+deactivate WMR
+
+@enduml
+
+@startuml Sequence Diagram
+autonumber
+
+actor WAREHOUSEMANAGER as WMR
+
+activate WMR
+box "<<System>> EletricGO" #LightBlue
+participant "SPA" as SPA
+participant "WM" as WM
+participant "Logistic" as LOG
+participant "Planning" as PLAN
+end box
+
+alt if warehouse doesn't exist
+WMR -> SPA: Starts to create a Warehouse
+activate SPA
+SPA - -> WMR: Asks for data
+deactivate SPA
+WMR-> SPA: Introduce the requested data
+activate SPA
+SPA -> WM: POST
+deactivate SPA
+activate WM
+alt if ok 
+
+WM - -> SPA: 201 
+activate SPA
+WMR <- - SPA: CREATED
+deactivate SPA
+else error 
+SPA <- - WM: 400/423
+deactivate WM
+activate SPA
+
+WMR <- - SPA: ERROR
+deactivate SPA
+
+
+end alt
+else if you want to edit the warehouse
+
+WMR -> SPA: Starts to edit a Warehouse
+activate SPA
+SPA - -> WMR: Asks for data
+deactivate SPA
+
+WMR-> SPA: Introduce the requested data
+
+activate SPA
+SPA -> WM: POST
+deactivate SPA
+activate WM
+alt if ok 
+
+WM - -> SPA: 200
+activate SPA
+WMR <- - SPA: OK
+deactivate SPA
+else error 
+SPA <- - WM: 400/423
+deactivate WM
+activate SPA
+
+WMR <- - SPA: ERROR
+deactivate SPA
+end alt
+
+else if you want to list the warehouse
+WMR -> SPA: asks to list the Warehouses
+activate SPA
+SPA -> WM: getWarehouses()
+deactivate SPA
+activate WM
+alt if ok 
+
+WM - -> SPA: 200
+activate SPA
+WMR <- - SPA: OK and shows list of warehouses
+deactivate SPA
+else error 
+SPA <- - WM: 400/423
+deactivate WM
+activate SPA
+
+WMR <- - SPA: ERROR
+deactivate SPA
+
+end alt
+end alt
+
+
+deactivate WMR
+
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 18:01:30 BST 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

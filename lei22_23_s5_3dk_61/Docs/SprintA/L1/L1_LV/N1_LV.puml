@@ -1,0 +1,8 @@
+@startuml Component Diagram 
+
+[<<Context C4>> «System» ELETRIC GO]
+' interface SSOAPI
+' SSOAPI -[<<Context C4>> «System» ELETRIC GO]
+actor  UI_USER
+UI_USER 0-- [<<Context C4>> «System» ELETRIC GO]
+

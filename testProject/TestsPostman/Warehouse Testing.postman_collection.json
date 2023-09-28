@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "98e7b2d0-a3e2-4e2f-b283-cb461fbb206a",
+		"name": "Warehouse Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23549173"
+	},
+	"item": [
+		{
+			"name": "Get Warehouse that doesn't exist",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test: 404, Warehouse not found\", function() {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/warehouse/getByWI/W01",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"warehouse",
+						"getByWI",
+						"W01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new Warehouse",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code: 201, New Warehouse created succefully!\", function() {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n    \"WarehouseIdentifier\": \"W01\",\n    \"Designation\": \"Porto Storage Center\",\n    \"Latitude\": 41.15,\n    \"Longitude\": -8.61024,\n    \"Street\": \"Rua do Carmo\",\n    \"DoorNumber\": 269,\n    \"City\": \"Porto\",\n    \"ZipCode\": \"4050-157\",\n    \"WarehouseAltitude\": \"200\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/warehouse/createWarehouse",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"warehouse",
+						"createWarehouse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify if Warehouse was created",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test: 200, Warehouse already exists!\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/warehouse/getByWI/W01",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"warehouse",
+						"getByWI",
+						"W01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Warehouse",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test is 200, Designation updated succecfully!\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n    \"warehouseIdentifier\": \"W01\",\n    \"designation\": \"Lisbon Storage Center\",\n    \"latitude\": 38.7369,\n    \"longitude\": -9.1426,\n    \"street\": \"Avenida Duque de Ávila\",\n    \"doorNumber\": 102,\n    \"city\": \"Lisbon\",\n    \"zipCode\": \"1070-202\",\n    \"warehouseAltitude\": \"125\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/warehouse/Update/W01",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"warehouse",
+						"Update",
+						"W01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify Warehouse is updated",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test is 200, Warehouse is updated\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Designation updated succecfully!\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.designation).to.eql(\"Lisbon Storage Center\")",
+							"});",
+							"pm.test(\"Street updated succecfully!\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.street).to.eql(\"Avenida Duque de Ávila\")",
+							"});",
+							"pm.test(\"Door number updated succecfully!\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.doorNumber).to.eql(102)",
+							"});",
+							"pm.test(\"Zip code updated succecfully!\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.zipCode).to.eql(\"1070-202\")",
+							"});",
+							"pm.test(\"City updated succecfully!\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.city).to.eql(\"Lisbon\")",
+							"});",
+							"pm.test(\"Latitude updated succecfully!\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.latitude).to.eql(38.7369)",
+							"});",
+							"pm.test(\"Longitude updated succecfully!\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.longitude).to.eql(-9.1426)",
+							"});",
+							"pm.test(\"Altitude updated succecfully!\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.warehouseAltitude).to.eql(\"125\")",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/warehouse/getByWI/W01",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"warehouse",
+						"getByWI",
+						"W01"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

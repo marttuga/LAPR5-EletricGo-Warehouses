@@ -1,0 +1,169 @@
+@startuml Sequence Diagram
+autonumber
+
+actor LOGISTICMANAGER as LM
+
+activate LM
+box "<<System>> EletricGO" #LightBlue
+'participant "<<System>> EletricGO" as E
+participant "SPA" as SPA
+participant "Logistic" as LOGI
+participant "WM" as WM
+participant "Planning" as PLAN
+participant "routeController" as ctrl
+participant "routeService" as serv
+participant "routeRepo" as repo
+participant "route" as route
+participant "routeMap" as map
+
+end box
+
+alt create route
+    LM -> SPA: Starts to create a route
+    activate SPA
+    SPA --> LM: Asks for data
+    deactivate SPA
+    LM-> SPA: Introduce the requested data
+    activate SPA
+    SPA -> LOGI: POST
+    deactivate SPA
+    activate LOGI
+    LOGI -> ctrl: createroute(req, res, next)
+    deactivate LOGI
+    activate ctrl
+    ctrl -> serv: createroute( routeDTO)
+    deactivate ctrl
+    activate serv
+   
+    serv -> repo:route= findByRouteId(routeId)
+    activate repo
+    serv -> route: create(routeDTO)
+    deactivate repo
+    activate route
+
+    alt if ok
+    serv -> repo: Save(route)
+    deactivate route
+    activate repo
+    serv -> map: toDTO(route)
+    deactivate repo
+    activate map
+
+    serv --> SPA: 201
+    deactivate map
+     
+    activate SPA
+    LM <-- SPA: CREATED
+    deactivate SPA
+   
+    else error
+    SPA <-- serv: 400/423
+    deactivate LOGI
+    activate SPA
+
+    deactivate serv
+    LM <-- SPA: ERROR
+    deactivate SPA
+
+    end alt
+
+
+
+
+    else edit the route
+
+    LM -> SPA: Starts to edit a route
+    activate SPA
+    SPA --> LM: Asks for data
+    deactivate SPA
+
+    LM-> SPA: Introduce the requested data
+
+    activate SPA
+    SPA -> LOGI: UPDATE
+    deactivate SPA
+    activate LOGI
+    LOGI -> ctrl: updateroute(req, res, next)
+    deactivate LOGI
+    activate ctrl
+    ctrl -> serv: updateroute( routeDTO)
+    deactivate ctrl
+    activate serv
+   
+    serv -> repo: route=findByRouteId(routeId)
+    activate repo
+    serv -> route: update(route)
+    deactivate repo
+    activate route
+
+    alt if ok
+    serv -> repo: Save(route)
+    deactivate route
+    activate repo
+    serv -> map: toDTO(route)
+    deactivate repo
+    activate map
+
+    serv --> SPA: 200
+    deactivate map
+     
+    activate SPA
+    LM <-- SPA: OK
+    deactivate SPA
+   
+    else error
+    SPA <-- serv: 400/423
+    deactivate LOGI
+    activate SPA
+
+    deactivate serv
+    LM <-- SPA: ERROR
+    deactivate SPA
+
+    end alt
+
+        else list the route
+            LM -> SPA: asks to list the routes
+            activate SPA
+            SPA -> LOGI: GET
+            deactivate SPA
+    activate LOGI
+    LOGI -> ctrl: getroutes(req, res, next)
+    deactivate LOGI
+    activate ctrl
+    ctrl -> serv: getroutes( routeDTO)
+    deactivate ctrl
+    activate serv
+   
+    serv -> repo: routeList=getAllroutes(routeId)
+    activate repo
+    deactivate repo
+
+    alt if ok
+    
+    serv -> map: toDTO(routes)
+    activate map
+
+    serv --> SPA: 200
+    deactivate map
+     
+    activate SPA
+    LM <-- SPA: OK
+    deactivate SPA
+   
+    else error
+    SPA <-- serv: 400/423
+    deactivate LOGI
+    activate SPA
+
+    deactivate serv
+    LM <-- SPA: ERROR
+    deactivate SPA
+
+    end alt
+    end alt
+
+
+    deactivate LM
+
+ @enduml
